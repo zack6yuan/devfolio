@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+* {
+  font-family: 'Coolvetica';
+  background-color: black;
+}
