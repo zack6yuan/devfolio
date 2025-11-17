@@ -6,14 +6,14 @@ export default function SocialLinks() {
   return (
     <div className="">
       <div className="flex m space-x-6">
-        <a href="[Your LinkedIn URL]" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/zack6yuan/" target="_blank" rel="noopener noreferrer">
           <img
             src={linkedin}
             alt="LinkedIn Logo"
             className="w-15 h-15 transition duration-300 hover:scale-110"
           />
         </a>
-        <a href="mailto:[Your Email]" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:zack6yuan@gmail.com" target="_blank" rel="noopener noreferrer">
           <img
             src={gmail}
             alt="Email Logo"

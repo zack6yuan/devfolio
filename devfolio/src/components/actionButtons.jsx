@@ -2,7 +2,7 @@ export default function ActionButtons() {
   return (
     <div className="mt-4">
       <button
-        className="relative px-15 py-3 bg-[#00c3ff]!
+        className="relative px-12 py-3 bg-[#ff7400]!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl mr-2"
       >
@@ -15,7 +15,7 @@ export default function ActionButtons() {
         Download CV
       </button>
       <button
-        className="relative px-21.5 py-3 bg-[#00c3ff]!
+        className="relative px-12 py-3 bg-[#ff7400]!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
       >
@@ -25,7 +25,7 @@ export default function ActionButtons() {
       blur-sm transition-transform duration-500"
         ></span>
         <span className="relative z-10"></span>
-        Hire Me
+        My Experience
       </button>
     </div>
   );

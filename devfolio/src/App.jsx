@@ -2,15 +2,39 @@ import "./App.css";
 import Footer from "./components/footer";
 import HeroSection from "./components/hero";
 import SocialLinks from "./components/socialLinks";
+import Experience from './components/experience';
+import Development from "./components/development";
+import AboutAtlas from './components/aboutAtlas';
+import Toolkit from './components/toolkit';
+import Projects from "./components/projects";
+import Connect from "./components/connect";
 
 function App() {
   return (
     <div className="">
-      <div className="flex h-screen items-center">
+      <div className="flex h-screen items-center gap-120">
         <HeroSection /> 
         <SocialLinks /> 
       </div>
-      <div className="">
+      <div className="h-screen">
+        <Experience />
+      </div>
+      <div className="-mt-150">
+        <Development />
+      </div>
+      <div className="mt-50">
+        <AboutAtlas />
+      </div>
+      <div className="mt-50">
+        <Toolkit />
+      </div>
+      <div className="mt-50">
+        <Projects />
+      </div>
+      <div className="mt-50">
+        <Connect />
+      </div>
+      <div className="mt-100">
         <Footer />
       </div>
     </div>
