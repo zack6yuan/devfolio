@@ -15,9 +15,6 @@ export default function HeroSection() {
           <ActionButtons />
         </div>
       </div>
-      <div className="">
-        <SocialLinks />
-      </div>
     </div>
   );
 }
