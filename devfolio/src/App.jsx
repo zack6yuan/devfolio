@@ -5,11 +5,11 @@ import HeroSection from "./components/hero";
 function App() {
   return (
     <div className="">
-      <div className="">
+      <div className="flex h-screen items-center">
         <HeroSection />
-        <div className="">
-          <Footer />
-        </div>
+      </div>
+      <div className="">
+        <Footer />
       </div>
     </div>
   );

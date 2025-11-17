@@ -4,7 +4,7 @@ import github from "../assets/github.png";
 
 export default function SocialLinks() {
   return (
-    <div className="flex space-x-6 h-screen justify-end"> 
+    <div className="flex space-x-6 items-right"> 
       <a href="[Your LinkedIn URL]" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} alt="LinkedIn Logo" className="w-8 h-8 transition duration-300 hover:scale-110" />
       </a>
