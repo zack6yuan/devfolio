@@ -1,6 +1,7 @@
 import linkedin from "../assets/linkedin.png"
 import gmail from "../assets/gmail.png"
 import github from "../assets/linkedin.png"
+import ActionButtons from "./actionButtons";
 
 export default function HeroSection() {
   return (
@@ -10,6 +11,9 @@ export default function HeroSection() {
       </div>
       <div className="flex-row text-2xl">
         <p>I'm a Full-Stack Developer from Tulsa, Oklahoma</p>
+      </div>
+      <div className="">
+        <ActionButtons />
       </div>
       <div className="flex space-x-6 h-screen justify-end">
         <a href="[Your LinkedIn URL]" target="_blank" rel="noopener noreferrer">

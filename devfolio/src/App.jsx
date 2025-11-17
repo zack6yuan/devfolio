@@ -1,12 +1,15 @@
 import "./App.css";
+import Footer from "./components/footer";
 import HeroSection from "./components/hero";
-import SocialLinks from "./components/socialLinks";
 
 function App() {
   return (
     <div className="">
       <div className="">
         <HeroSection />
+        <div className="">
+          <Footer />
+        </div>
       </div>
     </div>
   );
