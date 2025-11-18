@@ -4,20 +4,20 @@ import github from "../assets/github.png";
 
 export default function SocialLinks() {
   return (
-    <div className="">
-      <div className="flex m space-x-6">
+    <div className="sm:-mt-60 md:-ml-110 md:-mt-38 lg:-ml-50 lg:-mt-59 xl:ml-3">
+      <div className="flex space-x-6">
         <a href="https://www.linkedin.com/in/zack6yuan/" target="_blank" rel="noopener noreferrer">
           <img
             src={linkedin}
             alt="LinkedIn Logo"
-            className="w-15 h-15 transition duration-300 hover:scale-110"
+            className="shrink-0 w-15 h-15 transition duration-300 hover:scale-110"
           />
         </a>
         <a href="mailto:zack6yuan@gmail.com" target="_blank" rel="noopener noreferrer">
           <img
             src={gmail}
             alt="Email Logo"
-            className="w-15 h-15 transition duration-300 hover:scale-110"
+            className="shrink-0 w-15 lg:h-15 transition duration-300 hover:scale-110"
           />
         </a>
         <a
@@ -28,7 +28,7 @@ export default function SocialLinks() {
           <img
             src={github}
             alt="GitHub Logo"
-            className="w-15 h-15 transition duration-300 hover:scale-110"
+            className="shrink-0 w-15 h-15 transition duration-300 hover:scale-110"
           />
         </a>
       </div>

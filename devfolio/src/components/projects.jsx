@@ -7,9 +7,9 @@ export default function Projects() {
         </h1>
       </div>
       <div className="text-white text-xl justify-between mb-8">
-        <p className="text-center w-300">
-          My team and I's capstone project:{" "}
-          <span className="text-[#ff7400]!">AeroDuel.</span> A real-time,
+        <p className="text-center 2xl:w-300 xl:w-300 lg:w-200">
+          My team and I's capstone project:
+          <span className="text-[#ff7400]!"> AeroDuel.</span> A real-time,
           camera-based aerial battle system where two 3D-printed RC planes
           detect and “lock on” to each other's colored LEDs and send hit
           confirmations to a live React scoreboard.

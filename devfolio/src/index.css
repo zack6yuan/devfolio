@@ -1,4 +1,9 @@
+/* Load the config first */
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 475px;
+}
 
 * {
   font-family: 'Coolvetica';
