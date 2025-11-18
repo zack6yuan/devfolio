@@ -12,13 +12,13 @@ import Connect from "./components/connect";
 function App() {
   return (
     <div className="">
-      <div className="flex flex-col md:flex-row h-screen items-center gap-120">
+      <div className="flex flex-col md:flex-row h-screen items-center gap-120 xxs:mt-5">
         <HeroSection /> 
         <div className="md:mr-10 md:w-1/2 lg:mt-40 md:mt-0 sm:mt-0 xs:-mt-60">
           <SocialLinks /> 
         </div>
       </div>
-      <div className="h-screen">
+      <div className="h-screen xxs:-mt-90">
         <Experience />
       </div>
       <div className="-mt-150">

@@ -1,11 +1,21 @@
-/* Load the config first */
+/* 1. DEFINE THE FONT */
+@font-face {
+  font-family: 'Coolvetica'; 
+  src: url('./assets/fonts/Coolvetica.otf') format('opentype');
+       
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap; 
+}
+
 @import "tailwindcss";
 
 @theme {
   --breakpoint-xs: 475px;
+  --breakpoint-xxs: 430px;
 }
 
 * {
-  font-family: 'Coolvetica';
+  font-family: 'Coolvetica', sans-serif; 
   background-color: black;
 }

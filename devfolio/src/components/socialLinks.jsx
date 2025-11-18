@@ -4,7 +4,7 @@ import github from "../assets/github.png";
 
 export default function SocialLinks() {
   return (
-    <div className="sm:-mt-60 md:-ml-110 md:-mt-38 lg:-ml-50 lg:-mt-59 xl:ml-3">
+    <div className="sm:-mt-60 md:-ml-110 md:-mt-38 lg:-ml-50 lg:-mt-59 xl:ml-3 xxs:-mt-80">
       <div className="flex space-x-6">
         <a href="https://www.linkedin.com/in/zack6yuan/" target="_blank" rel="noopener noreferrer">
           <img

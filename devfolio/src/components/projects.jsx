@@ -2,11 +2,11 @@ export default function Projects() {
   return (
     <div className="flex flex-col items-center">
       <div className="">
-        <h1 className="text-6xl text-white mb-8">
+        <h1 className="xs:text-6xl text-white mb-8 xxs: text-3xl">
           I'm currently working on...
         </h1>
       </div>
-      <div className="text-white text-xl justify-between mb-8">
+      <div className="text-white md:text-xl xxs:text-sm justify-between mb-8">
         <p className="text-center 2xl:w-300 xl:w-300 lg:w-200">
           My team and I's capstone project:
           <span className="text-[#ff7400]!"> AeroDuel.</span> A real-time,
