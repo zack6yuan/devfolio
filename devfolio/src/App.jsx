@@ -8,10 +8,12 @@ import AboutAtlas from './components/aboutAtlas';
 import Toolkit from './components/toolkit';
 import Projects from "./components/projects";
 import Connect from "./components/connect";
+import NavBar from "./components/navBar";
 
 function App() {
   return (
     <div className="">
+      <NavBar />
       <div className="flex flex-col md:flex-row h-screen items-center gap-120 xxs:mt-5">
         <HeroSection /> 
         <div className="md:mr-10 md:w-1/2 lg:mt-40 md:mt-0 sm:mt-0 xs:-mt-60">
