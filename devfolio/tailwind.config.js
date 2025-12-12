@@ -1,21 +1,20 @@
 /* eslint-env commonjs */
 
 /** @type {import('tailwindcss').Config} */
-module.exports = { // <--- Changed from 'export const'
-  content: [
-    // Specify the files Tailwind should scan for class names.
-    "./src/**/*.{html,js,jsx,ts,tsx}",
-    "./public/index.html",
-  ],
-  theme: {
-    // Extend or override Tailwind's default theme here
-    extend: {
-      screens: {
-        'xs': '475px', // This is now correctly registered
-      },
+export const content = [
+  "./src/**/*.{html,js,jsx,ts,tsx}",
+  "./public/index.html",
+];
+export const theme = {
+  extend: {
+    screens: {
+      'xs': '475px',
+    },
+    fontFamily: {
+      'coolvetica': ['Coolvetica', 'sans-serif'],
+      'coolvetica-light': ['Coolvetica-Light', 'sans-serif'],
+      'moralana': ['Moralana', 'sans-serif'],
     },
   },
-  plugins: [
-    // Add any official or third-party Tailwind plugins here
-  ],
 };
+export const plugins = [];

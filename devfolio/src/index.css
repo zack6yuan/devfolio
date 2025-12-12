@@ -1,14 +1,16 @@
-/* 1. DEFINE THE FONT */
-@font-face {
-  font-family: 'Coolvetica'; 
-  src: url('./assets/fonts/Coolvetica.otf') format('opentype');
-       
-  font-weight: 400; 
-  font-style: normal;
-  font-display: swap; 
-}
-
 @import "tailwindcss";
+
+@layer utilities {
+  .font-coolvetica {
+    font-family: 'Coolvetica', sans-serif;
+  }
+  .font-coolvetica-light {
+    font-family: 'Coolvetica-Light', sans-serif;
+  }
+  .font-moralana {
+    font-family: 'Moralana', sans-serif;
+  }
+}
 
 @theme {
   --breakpoint-xs: 475px;
@@ -16,6 +18,5 @@
 }
 
 * {
-  font-family: 'Coolvetica', sans-serif;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(252, 246, 235);
 }

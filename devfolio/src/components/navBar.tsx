@@ -1,23 +1,60 @@
+import { useState } from 'react';
+
 export default function navBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="text-white flex justify-between">
-      <div className="flex-row">
-        <p className="text-3xl">Zack Yuan</p>
-      </div>
-      <div className="flex flex-row gap-10 text-xl">
-        <a href="#">
-          <p className="hover:text-[#ff7400]! transition ease-in-out">My Experience</p>
-        </a>
-        <a href="#">
-          <p className="hover:text-[#ff7400]! transition ease-in-out">Tech Stack</p>
-        </a>
-        <a href="#">
-          <p className="hover:text-[#ff7400]! transition ease-in-out">Projects</p>
-        </a>
-        <a href="#">
-          <p className="hover:text-[#ff7400]! transition ease-in-out">Connect</p>
-        </a>
+    <div className="">
+      <nav className="bg-gray-800 p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <a href="/" className="text-black font-moralana text-2xl font-bold">
+            Zack Yuan
+          </a>
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="text-black md:hidden" 
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu-links"
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <div className="hidden md:flex space-x-4">
+            <a href="#" className="text-black font-moralana hover:scale-110 transition duration-300">Home</a>
+            <a href="#" className="text-black font-moralana hover:scale-110 transition duration-300">Experience</a>
+            <a href="#" className="text-black font-moralana hover:scale-110 transition duration-300">Projects</a>
+            <a href="#" className="text-black font-moralana hover:scale-110 transition duration-300">Hire Me</a>
+          </div>
+        </div>
+      </nav>
+      <div 
+        id="mobile-menu-links"
+        className={`
+          md:hidden 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          overflow-hidden 
+          ${isOpen ? 'max-h-screen' : 'max-h-0'}
+        `}
+      >
+        <a href="#" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Home</a>
+        <a href="#" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Experience</a>
+        <a href="#" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Projects</a>
+        <a href="#" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Hire Me</a>
       </div>
     </div>
-  )
+  );
 }
