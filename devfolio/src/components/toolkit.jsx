@@ -2,10 +2,12 @@ export default function Toolkit() {
   return (
     <div className="flex flex-col items-center">
       <div className="">
-        <h1 className="text-6xl text-white mb-8 xxs:text-3xl">My Technical Arsenal</h1>
+        <h1 className="font-moralana text-5xl text-black mb-8 xs:mt-20">
+          My Technical Arsenal
+        </h1>
       </div>
-      <div className="text-white text-xl lg:w-220 justify-between mb-8">
-        <p className="text-center xs:text-sm sm:text-xl xxs:text-sm">
+      <div className="text-black xs:w-105 sm:w-160 lg:w-180 justify-between mb-10">
+        <p className="font-moralana text-left sm:text-xl">
           My technical focus is in React and React Native, enabling me to
           engineer cohesive, end-to-end applications across both web and mobile
           platforms. This cross-platform approach maximizes code reuse and
@@ -14,9 +16,9 @@ export default function Toolkit() {
           and strong SQL for backend architecture and data tooling.
         </p>
       </div>
-      <div className="flex gap-3 md:w-194 md:ml-15">
+      <div className="flex gap-3 md:w-194 md:ml-15 font-moralana">
         <button
-          className="relative sm:px-14 md:px-10 xs:px-3 xxs:px-1.5 py-3 bg-[#ff0000]!
+          className="relative sm:px-14 md:px-10 xs:px-3 xxs:px-1.5 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -29,7 +31,7 @@ export default function Toolkit() {
           React
         </button>
         <button
-          className="relative sm:px-5 md:px-7 xs:px-2 xxs:px-1 py-3 bg-[#ff3a00]!
+          className="relative sm:px-5 md:px-7 xs:px-2 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -42,7 +44,7 @@ export default function Toolkit() {
           Native
         </button>
         <button
-          className="relative sm:px-5 md:px-9 xs:px-2 xxs:px-1 py-3 bg-[#ff7400]!
+          className="relative sm:px-5 md:px-9 xs:px-2 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -55,7 +57,7 @@ export default function Toolkit() {
           MySQL
         </button>
         <button
-          className="relative sm:px-5 md:px-7 xs:px-2 xxs:px-2 py-3 bg-[#ff9a00]!
+          className="relative sm:px-5 md:px-7 xs:px-2 xxs:px-2 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -68,7 +70,7 @@ export default function Toolkit() {
           JavaScript
         </button>
         <button
-          className="relative sm:px-7 md:px-12 xs:px-1 xxs:px-1 py-3 bg-[#ffc100]!
+          className="relative sm:px-7 md:px-12 xs:px-1 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -81,9 +83,9 @@ export default function Toolkit() {
           Python
         </button>
       </div>
-      <div className="flex gap-3 mt-4">
+      <div className="font-moralana flex gap-3 mt-4">
         <button
-          className="relative sm:px-7 md:px-7 xs:px-2 xxs:px-1 py-3 bg-[#ff0000]!
+          className="relative sm:px-7 md:px-7 xs:px-2 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -96,7 +98,7 @@ export default function Toolkit() {
           TailwindCSS
         </button>
         <button
-          className="relative sm:px-7 md:px-11 xs:px-1 xxs:px-1 py-3 bg-[#ff3a00]!
+          className="relative sm:px-7 md:px-11 xs:px-1 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -109,7 +111,7 @@ export default function Toolkit() {
           Figma
         </button>
         <button
-          className="relative sm:px-7 md:px-9 xs:px-1 xxs:px-1 py-3 bg-[#ff7400]!
+          className="relative sm:px-7 md:px-9 xs:px-1 xxs:px-1 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -122,7 +124,7 @@ export default function Toolkit() {
           Vercel
         </button>
         <button
-          className="relative sm:px-7 md:px-10 xs:px-1 xxs:px-0.5 py-3 bg-[#ff9a00]!
+          className="relative sm:px-7 md:px-10 xs:px-1 xxs:px-0.5 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -135,7 +137,7 @@ export default function Toolkit() {
           Postman
         </button>
         <button
-          className="relative sm:px-6 md:px-5 xs:px-2 py-3 bg-[#ffc100]!
+          className="relative sm:px-6 md:px-5 xs:px-2 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -148,9 +150,9 @@ export default function Toolkit() {
           GitHub
         </button>
       </div>
-      <div className="flex gap-3 mt-4">
+      <div className="font-moralana flex gap-3 mt-4 mb-4">
         <button
-          className="relative sm:px-10 md:px-12 xs:px-4 xxs:px-3 py-3 bg-[#ff0000]!
+          className="relative sm:px-10 md:px-12 xs:px-4 xxs:px-3 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -163,7 +165,7 @@ export default function Toolkit() {
           API's
         </button>
         <button
-          className="relative sm:px-10 mdd:px-15 xs:px-4 xxs:px-3 py-3 bg-[#ff3a00]!
+          className="relative sm:px-10 mdd:px-15 xs:px-4 xxs:px-3 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -176,7 +178,7 @@ export default function Toolkit() {
           JSON
         </button>
         <button
-          className="relative sm:px-10 md:px-9 xs:px-4 xxs:px-3 py-3 bg-[#ff7400]!
+          className="relative sm:px-10 md:px-9 xs:px-4 xxs:px-3 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -189,7 +191,7 @@ export default function Toolkit() {
           Netlify
         </button>
         <button
-          className="relative sm:px-9 md:px-13 xs:px-4 xxs:px-3 py-3 bg-[#ff9a00]!
+          className="relative sm:px-9 md:px-13 xs:px-4 xxs:px-3 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >
@@ -202,7 +204,7 @@ export default function Toolkit() {
           HTML
         </button>
         <button
-          className="relative sm:px-9 md:px-12 xs:px-5 xxs:px-5 py-3 bg-[#ffc100]!
+          className="relative sm:px-9 md:px-12 xs:px-5 xxs:px-5 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl"
         >

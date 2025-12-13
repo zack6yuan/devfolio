@@ -1,36 +1,30 @@
+import { Link } from 'react-router-dom';
+
 export default function Projects() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="">
-        <h1 className="xs:text-6xl text-white mb-8 xxs: text-3xl">
-          I'm currently working on...
-        </h1>
-      </div>
-      <div className="text-white md:text-xl xxs:text-sm justify-between mb-8">
-        <p className="text-center 2xl:w-300 xl:w-300 lg:w-200">
-          My team and I's capstone project:
-          <span className="text-[#ff7400]!"> AeroDuel.</span> A real-time,
-          camera-based aerial battle system where two 3D-printed RC planes
-          detect and “lock on” to each other's colored LEDs and send hit
-          confirmations to a live React scoreboard.
-        </p>
-      </div>
-      <div className="flex gap-3">
-        <a href="https://www.github.com/Aeroduel">
-          <button
-            className="relative px-12 py-3 bg-[#ff7400]!
-     text-white font-bold rounded-md overflow-hidden
-     group cursor-pointer hover:scale-105 duration-300 text-xl"
-          >
-            <span
-              className="absolute inset-0 bg-white! opacity-30
-      rotate-45 -translate-x-full group-hover:translate-x-full
-      blur-sm transition-transform duration-500"
-            ></span>
-            <span className="relative z-10"></span>
-            View Project
-          </button>
-        </a>
+    <div className="flex flex-row items-center">
+      <div className="flex flex-row justify-between font-moralana">
+        <div className="">
+          <h1 className=" text-3xl mb-5 text-left">Aeroduel</h1>
+          <p className="text-left mb-5 sm:w-50">A real-time aerial combat battle-simulator that implements WebSockets for client and server communication.</p>
+          <Link to="https://www.github.com/Aeroduel">
+            <p className="hover:scale-110 transition duration-300 text-left">GitHub Repository</p>
+          </Link>
+        </div>
+        <div className="">
+          <h1 className="text-3xl mb-5 text-center">Lumigram</h1>
+          <p className="text-center mb-5 sm:w-40">An Instagram clone, built with React Native, Expo, and Google Firebase.</p>
+          <Link to="https://www.github.com/zack6yuan/atlas-lumigram">
+            <p className="hover:scale-110 transition duration-300 text-ceter">GitHub Repository</p>
+          </Link>
+        </div>
+        <div className="">
+          <h1 className="text-3xl mb-5 text-right">Diinker</h1>
+          <p className="text-right mb-5 sm:w-50">My current personal project. An intuitive pickleball experience that combines hardware and software.</p>
+          <Link to="https://www.github.com/Diinker">
+            <p className="hover:scale-110 transition duration-300 text-right">GitHub Repository</p>
+          </Link>
+        </div>
       </div>
     </div>
   );
