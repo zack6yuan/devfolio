@@ -11,8 +11,6 @@ export const theme = {
       'xs': '475px',
     },
     fontFamily: {
-      'coolvetica': ['Coolvetica', 'sans-serif'],
-      'coolvetica-light': ['Coolvetica-Light', 'sans-serif'],
       'moralana': ['Moralana', 'sans-serif'],
     },
   },
