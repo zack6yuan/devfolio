@@ -2,12 +2,12 @@ export default function Toolkit() {
   return (
     <div className="flex flex-col items-center">
       <div className="">
-        <h1 className="font-moralana text-6xl text-black mb-8 xxs:text-3xl">
+        <h1 className="font-moralana text-5xl text-black mb-8 xs:mt-20">
           My Technical Arsenal
         </h1>
       </div>
-      <div className="text-black text-xl lg:w-220 justify-between mb-8">
-        <p className="font-moralana text-center xs:text-sm sm:text-xl xxs:text-sm">
+      <div className="text-black xs:w-105 sm:w-160 lg:w-180 justify-between mb-10">
+        <p className="font-moralana text-left sm:text-xl">
           My technical focus is in React and React Native, enabling me to
           engineer cohesive, end-to-end applications across both web and mobile
           platforms. This cross-platform approach maximizes code reuse and
@@ -150,7 +150,7 @@ export default function Toolkit() {
           GitHub
         </button>
       </div>
-      <div className="font-moralana flex gap-3 mt-4">
+      <div className="font-moralana flex gap-3 mt-4 mb-4">
         <button
           className="relative sm:px-10 md:px-12 xs:px-4 xxs:px-3 py-3 bg-black!
      text-white font-bold rounded-md overflow-hidden

@@ -1,19 +1,22 @@
 import "./App.css";
-import Footer from "./components/footer";
-import HeroSection from "./components/hero";
-import NavBar from "./components/navBar";
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
+import ExperiencePage from "./ExperiencePage";
+import ProjectsPage from "./ProjectsPage";
+import HireMePage from "./HireMePage";
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <div className="flex flex-row md:flex-row h-screen items-center justify-center xxs:mt-5">
-        <HeroSection />
-      </div>
-      <div className="">
-        <Footer />
-      </div>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/hire-me" element={<HireMePage />} />
+      </Routes>
     </div>
   );
 }
