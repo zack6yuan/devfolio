@@ -16,7 +16,7 @@ export default function Projects() {
         </p>
       </div>
       <div className="flex gap-3">
-        <a href="https://www.linkedin.com/posts/zack6yuan_softwaredevelopment-capstone-reactjs-activity-7392067930403803136-1OyO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEd_PAkBSf2DVdkKUC6lUrEL6zs7J2l_hS0">
+        <a href="https://www.github.com/Aeroduel">
           <button
             className="relative px-12 py-3 bg-[#ff7400]!
      text-white font-bold rounded-md overflow-hidden
