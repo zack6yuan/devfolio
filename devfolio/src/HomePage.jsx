@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-row md:flex-row h-screen items-center justify-center xxs:mt-5">
+      <div className="flex flex-row md:flex-row h-screen items-center justify-center xxs:-mt-50">
         <HeroSection />
       </div>
       <div className="-mt-40">
