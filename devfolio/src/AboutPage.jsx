@@ -10,8 +10,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col items-center xxs:mt-0"> 
-        <div className="mb-12 xxs:mt-50">
+      <div className="flex flex-col items-center xxs:mt-30"> 
+        <div className="mb-12">
           <HeroSection />
         </div>
         <div className="xs:mb-20">
