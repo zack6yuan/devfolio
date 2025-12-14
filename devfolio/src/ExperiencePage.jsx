@@ -3,8 +3,6 @@ import Footer from "./components/footer";
 import HeroSection from "./components/heros/experienceHero";
 import AboutAtlas from "./components/aboutAtlas";
 import NavBar from "./components/navBar";
-import { Route, Routes } from "react-router-dom";
-import Experience from "./components/experience";
 
 function App() {
   return (

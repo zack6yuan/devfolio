@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col items-center justify-center xxs:mt-30">
+      <div className="flex flex-col items-center justify-center xxs:mt-30 xs:mt-70">
         <HeroSection />
         <div className="xs:mt-90">
           <Projects />

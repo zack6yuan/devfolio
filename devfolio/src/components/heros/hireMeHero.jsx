@@ -3,7 +3,7 @@ import ActionButtons from "../actionButtons";
 export default function HeroSection() {
   return (
     <div className="flex flex-col">
-      <div className=" text-black h-50 text-left xs:-mt-20">
+      <div className=" text-black h-50 text-left">
         <div className="">
           <h1 className="2xl:text-7xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-6xl xs:text-5xl xs:mb-3 xxs:text-5xl font-moralana">
             Hire Me

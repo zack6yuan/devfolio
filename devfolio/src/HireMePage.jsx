@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col h-screen items-center justify-center xs:mt-110">
+      <div className="flex flex-col h-screen items-center justify-center xxs:mt-30 xs:mt-5">
         <HeroSection />
-        <div className="xs:mt-140">
+        <div className="xs:mt-10">
           <Connect />
         </div>
       </div>

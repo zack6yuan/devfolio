@@ -1,13 +1,13 @@
 export default function Connect() {
   return (
-    <div className="flex flex-col text-left">
+    <div className="flex flex-col text-left 2xl:text-center">
       <div className="">
         <h1 className="sm:text-4xl text-black mb-8 xxs:text-3xl 2xl:text-5xl font-moralana">
           Let's Create Something Exceptional
         </h1>
       </div>
       <div className="text-black text-xl justify-between mb-10">
-        <p className="text-left 2xl:w-300 lg:w-200 xxs:text-sm xs:text-lg sm:text-xl font-moralana">
+        <p className="text-left 2xl:text-center 2xl:w-300 lg:w-200 xxs:text-sm xs:text-lg sm:text-xl font-moralana">
           I am actively seeking a Full-Stack or UX / UI role where I can
           leverage my expertise in the React ecosystem to build cohesive,
           high-performance web and mobile applications. Whether you're

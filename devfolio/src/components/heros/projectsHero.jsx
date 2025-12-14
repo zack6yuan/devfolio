@@ -1,5 +1,3 @@
-import ActionButtons from "../actionButtons";
-
 export default function HeroSection() {
   return (
     <div className="flex flex-col">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <div className="flex flex-col">
-      <div className=" text-black h-50 text-center xs:-mt-40">
+      <div className=" text-black h-50 text-center xs:-mt-40 2xl:mt-50">
         <div className="">
           <h1 className="2xl:text-7xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-6xl xxs:text-4xl xs:mb-3 font-moralana">
             Versatility in Action
