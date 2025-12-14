@@ -1,13 +1,13 @@
 export default function Toolkit() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col">
       <div className="">
-        <h1 className="font-moralana text-5xl text-black mb-8 xs:mt-20">
+        <h1 className="font-moralana xxs:text-left xxs:ml-5 text-5xl text-black xxs:mb-1 xs:mt-20 xxs:text-4xl">
           My Technical Arsenal
         </h1>
       </div>
       <div className="text-black xs:w-105 sm:w-160 lg:w-180 justify-between mb-10">
-        <p className="font-moralana text-left sm:text-xl">
+        <p className="font-moralana text-left sm:text-xl xxs:text-md xxs:mx-5">
           My technical focus is in React and React Native, enabling me to
           engineer cohesive, end-to-end applications across both web and mobile
           platforms. This cross-platform approach maximizes code reuse and

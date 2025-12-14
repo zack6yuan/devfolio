@@ -11,13 +11,13 @@ function App() {
     <div>
       <NavBar />
       <div className="flex flex-col items-center xxs:mt-0"> 
-        <div className="mb-12">
+        <div className="mb-12 xxs:mt-50">
           <HeroSection />
         </div>
         <div className="xs:mb-20">
           <ProfessionalSummary />
         </div>
-        <div className="xs:mt-80">
+        <div className="xxs:mt-50 xs:mt-80">
           <Toolkit />
         </div>
       </div>
