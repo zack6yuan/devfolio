@@ -6,7 +6,7 @@ export default function Toolkit() {
           My Technical Arsenal
         </h1>
       </div>
-      <div className="text-black xs:w-105 sm:w-160 lg:w-180 xxs:w-105 justify-between mb-10">
+      <div className="text-black xs:w-105 sm:w-160 lg:w-180 xxs:w-105 justify-between mb-3">
         <p className="font-moralana text-left sm:text-xl xxs:text-md xxs:mx-5">
           My technical focus is in React and React Native, enabling me to
           engineer cohesive, end-to-end applications across both web and mobile
