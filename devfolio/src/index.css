@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
-@layer utilities {
-  .font-coolvetica {
-    font-family: 'Coolvetica', sans-serif;
-  }
-  .font-coolvetica-light {
-    font-family: 'Coolvetica-Light', sans-serif;
-  }
-  .font-moralana {
-    font-family: 'Moralana', sans-serif;
-  }
+@font-face {
+  font-family: 'Moralana';
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
+  src: url('../public/assets/fonts/Moralana.otf') format('opentype');
 }
 
 @theme {
+  --font-moralana: 'Moralana', sans-serif;
+
   --breakpoint-xs: 475px;
   --breakpoint-xxs: 430px;
 }
