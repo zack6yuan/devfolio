@@ -1,7 +1,7 @@
 export default function Toolkit() {
   return (
     // 1. Centered Main Wrapper (2xl:mx-auto)
-    <div className="flex flex-col xs:-mt-30 sm:w-155 2xl:w-200 2xl:mx-auto"> 
+    <div className="flex flex-col xs:-mt-30 2xl:mx-auto"> 
       <div className="">
         {/* 2. Heading is centered at 2xl */}
         <h1 className="font-moralana xxs:text-left text-5xl text-black xxs:mb-1 sm:mb-5 xs:mb-5 xxs:text-4xl 2xl:text-6xl 2xl:text-center xxs:ml-5 2xl:ml-0">
@@ -9,7 +9,7 @@ export default function Toolkit() {
         </h1>
       </div>
       {/* Paragraph is already centered at 2xl */}
-      <div className="text-black xs:w-120 sm:w-160 lg:w-180 justify-between mb-3 2xl:mx-auto">
+      <div className="2xl:text-2xl xl:text-xl lg:text-xl md:text-xl sm:text-xl xs:text-lg xs:mb-25 xxs:text-md">
         <p className="font-moralana text-left 2xl:text-center sm:text-xl xxs:text-md xxs:mx-5 2xl:text-2xl 2xl:w-300 2xl:-ml-50 2xl:mb-10">
           My technical focus is in React and React Native, enabling me to
           engineer cohesive, end-to-end applications across both web and mobile
