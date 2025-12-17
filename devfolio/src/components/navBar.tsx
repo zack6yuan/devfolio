@@ -51,11 +51,11 @@ export default function navBar() {
           ${isOpen ? 'max-h-screen' : 'max-h-0'}
         `}
       >
-        <a href="/" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Home</a>
-        <a href="/about" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">About</a>
-        <a href="/experience" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Experience</a>
-        <a href="/projects" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Projects</a>
-        <a href="/hire-me" className="px-4 text-black font-moralana hover:scale-110 transition duration-300">Hire Me</a>
+        <a href="/" className="px-4 text-black font-moralana hover:scale-110 transition duration-300 xxs:text-xs">Home</a>
+        <a href="/about" className="px-4 text-black font-moralana hover:scale-110 transition duration-300 xxs:text-xs">About</a>
+        <a href="/experience" className="px-4 text-black font-moralana hover:scale-110 transition duration-300 xxs:text-xs">Experience</a>
+        <a href="/projects" className="px-4 text-black font-moralana hover:scale-110 transition duration-300 xxs:text-xs">Projects</a>
+        <a href="/hire-me" className="px-4 text-black font-moralana hover:scale-110 transition duration-300 xxs:text-xs">Hire Me</a>
       </div>
     </div>
   );

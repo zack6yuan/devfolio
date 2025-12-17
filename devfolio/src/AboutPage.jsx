@@ -4,20 +4,19 @@ import HeroSection from "./components/heros/aboutHero";
 import NavBar from "./components/navBar";
 import ProfessionalSummary from './components/professionalSummary';
 import Toolkit from "./components/toolkit";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col items-center xxs:mt-0"> 
+      <div className="flex flex-col items-center xxs:mt-30"> 
         <div className="mb-12">
           <HeroSection />
         </div>
         <div className="xs:mb-20">
           <ProfessionalSummary />
         </div>
-        <div className="xs:mt-80">
+        <div className="xxs:mt-50 xs:mt-80">
           <Toolkit />
         </div>
       </div>
