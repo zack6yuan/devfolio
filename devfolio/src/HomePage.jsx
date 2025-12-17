@@ -5,12 +5,12 @@ import NavBar from "./components/navBar";
 
 function App() {
   return (
-    <div>
+    <div className="h-screen flex flex-col overflow-hidden">
       <NavBar />
-      <div className="flex flex-row md:flex-row h-screen items-center justify-center xxs:mt-5">
+      <div className="flex-1 flex items-center justify-center">
         <HeroSection />
       </div>
-      <div className="-mt-40">
+      <div className="">
         <Footer />
       </div>
     </div>

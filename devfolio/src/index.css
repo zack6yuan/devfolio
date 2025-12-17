@@ -8,8 +8,26 @@
   src: url('../public/assets/fonts/Moralana.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Cascadia';
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
+  src: url('../public/assets/fonts/Cascadia.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kosmos';
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
+  src: url('../public/assets/fonts/kosmos.ttf') format('truetype');
+}
+
 @theme {
   --font-moralana: 'Moralana', sans-serif;
+  --font-cascadia: 'Cascadia', sans-serif;
+  --font-kosmos: "Kosmos", sans-serif;
 
   --breakpoint-xs: 475px;
   --breakpoint-xxs: 430px;

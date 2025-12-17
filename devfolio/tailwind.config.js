@@ -12,6 +12,7 @@ export const theme = {
     },
     fontFamily: {
       'moralana': ['Moralana', 'sans-serif'],
+      'cascadia': ['Cascadia', 'sans-serif'],
     },
   },
 };
