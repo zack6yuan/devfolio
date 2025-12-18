@@ -1,13 +1,13 @@
 export default function Connect() {
   return (
-    <div className="flex flex-col text-left 2xl:text-center">
+    <div className="flex flex-col text-center 2xl:text-center">
       <div className="">
         <h1 className="sm:text-4xl text-black mb-8 xxs:text-3xl 2xl:text-5xl font-moralana">
           Let's Create Something Exceptional
         </h1>
       </div>
       <div className="text-black text-xl justify-between mb-10">
-        <p className="text-left 2xl:text-center 2xl:w-300 lg:w-200 xxs:text-sm xs:text-lg sm:text-xl font-moralana">
+        <p className="text-center 2xl:text-center 2xl:w-300 lg:w-200 xxs:text-sm xs:text-lg sm:text-xl font-moralana">
           I am actively seeking a Full-Stack or UX / UI role where I can
           leverage my expertise in the React ecosystem to build cohesive,
           high-performance web and mobile applications. Whether you're
@@ -19,7 +19,7 @@ export default function Connect() {
       <div className="ml-2 mt-5 flex flex-col items-center">
         <a href="https://linkedin.com/in/zack6yuan">
           <button
-            className="font-moralana relative xs:mt-4 px-22.5 py-3 bg-black!
+            className="font-cascadia relative xs:mt-4 px-22.5 py-3 bg-black!
      text-white rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl mr-2"
           >
@@ -34,7 +34,7 @@ export default function Connect() {
         </a>
         <a href="https://www.github.com/zack6yuan">
           <button
-            className="font-moralana relative xxs:mt-3 xs:mt-4 px-24 py-3 bg-black!
+            className="font-cascadia relative xxs:mt-3 xs:mt-4 px-24 py-3 bg-black!
      text-white rounded-md overflow-hidden
      group cursor-pointer hover:scale-105 duration-300 text-xl mr-2"
           >
