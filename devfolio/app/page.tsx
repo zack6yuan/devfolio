@@ -1,3 +1,4 @@
+import Archipelago from "./components/archipelago";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
 import Passport from "./components/passport";
@@ -8,6 +9,7 @@ export default function Home() {
       <NavBar />
       <Hero />
       <Passport />
+      <Archipelago />
     </div>
   );
 }
