@@ -1,10 +1,54 @@
-import { Anchor, Globe } from "lucide-react";
+import { Anchor, Globe, Stamp, GraduationCap, Bot } from "lucide-react";
 import Image from "next/image";
+
+type StampAccent = "teal" | "green" | "orange" | "brown";
+
+const stampStyles: Record<StampAccent, { border: string; bg: string; text: string }> = {
+  teal: {
+    border: "border-teal-400",
+    bg: "bg-teal-50",
+    text: "text-teal-700",
+  },
+  green: {
+    border: "border-green-500",
+    bg: "bg-green-50",
+    text: "text-green-700",
+  },
+  orange: {
+    border: "border-orange-400",
+    bg: "bg-orange-50",
+    text: "text-orange-700",
+  },
+  brown: {
+    border: "border-[#8B5E3C]",
+    bg: "bg-[#F5EBE0]",
+    text: "text-[#6B4A2F]",
+  },
+};
+
+type VisaStamp = {
+  icon: React.ReactNode;
+  label: string;
+  accent: StampAccent;
+};
+
+const certifications: VisaStamp[] = [
+  {
+    icon: <GraduationCap className="w-4 h-4" />,
+    label: "Computer Science & Full-Stack Dev — Atlas School",
+    accent: "teal",
+  },
+  {
+    icon: <Bot className="w-4 h-4" />,
+    label: "AI Automation — OSU CFW",
+    accent: "orange",
+  },
+];
 
 export default function Passport() {
   return (
     <div className="flex flex-col items-center gap-5 pt-15 bg-[#FCF5E1]">
-    <p className="text-5xl animate-wiggle">📔</p>
+      <p className="text-5xl animate-wiggle">📔</p>
       <h1 className="text-4xl text-gray-800 font-bold">The Explorer&apos;s Passport</h1>
       <p className="text-gray-500">Identity verified by the Dev Islands Authority</p>
 
@@ -75,6 +119,7 @@ export default function Passport() {
           </div>
         </div>
       </div>
+
       <div className="text-gray-500 flex flex-col mx-15 text-center mb-10 gap-6">
         <h2 className="text-2xl font-bold text-gray-800">About the Explorer</h2>
         <div className="text-left flex flex-col gap-4">
@@ -90,23 +135,28 @@ export default function Passport() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col">
-        <h2 className="text-2xl font-bold mb-10 gap-6 text-gray-800">Certifications</h2>
-        <div className="flex flex-col text-gray-800 font-bold text-sm text-center gap-5">
-            <div className="">
-                <p className="">Computer Science & Full-Stack Web Development</p>
-                <p>Atlas School</p>
-            </div>
-            <div className="">
-                <p>AI Automation</p>
-                <p>OSU CFW</p>
-            </div>
-            <div className="">
-                <p></p>
-            </div>
-            <div className="">
-                <p></p>
-            </div>
+
+      {/* Visa Stamps — Certifications */}
+      <div className="flex flex-col items-center gap-6 mb-15 px-6 w-full max-w-2xl">
+        <div className="flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-gray-800">
+            🌋 Visa Stamps — Certifications
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          {certifications.map((cert) => {
+            const styles = stampStyles[cert.accent];
+            return (
+              <div
+                key={cert.label}
+                className={`flex items-center gap-2 border-2 ${styles.border} ${styles.bg} rounded-full px-5 py-3`}
+              >
+                <span className={styles.text}>{cert.icon}</span>
+                <p className={`font-bold text-sm ${styles.text}`}>{cert.label}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
