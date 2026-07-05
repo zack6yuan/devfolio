@@ -3,9 +3,10 @@ import Image from "next/image";
 
 export default function Passport() {
   return (
-    <div className="flex flex-col items-center gap-5">
-      <h1 className="text-4xl">The Explorer&apos;s Passport</h1>
-      <p>Identity verified by the Dev Islands Authority</p>
+    <div className="flex flex-col items-center gap-5 pt-15 bg-[#FCF5E1]">
+    <p className="text-5xl animate-wiggle">📔</p>
+      <h1 className="text-4xl text-gray-800 font-bold">The Explorer&apos;s Passport</h1>
+      <p className="text-gray-500">Identity verified by the Dev Islands Authority</p>
 
       <div className="flex items-center gap-5 p-5">
         <div className="w-20 h-1 bg-orange-400"></div>
@@ -49,19 +50,19 @@ export default function Passport() {
           <div className="mt-5 text-sm font-bold justify-start gap-2 grid grid-cols-2">
             <div className="">
               <p className=" text-white/70">Specialty</p>
-              <p className="text-white">JS Frameworks</p>
+              <p className="text-white">Front-End</p>
             </div>
             <div className="">
-              <p className=" text-white/70">XP Level</p>
-              <p className="text-white">99/100</p>
+              <p className=" text-white/70">Favorite Technologies</p>
+              <p className="text-white">Next.js, TailwindCSS</p>
             </div>
             <div className="">
               <p className=" text-white/70">Base Camp</p>
               <p className="text-white">Tulsa, Oklahoma</p>
             </div>
             <div className="">
-              <p className=" text-white/70">Active Since</p>
-              <p className="text-white">2023</p>
+              <p className=" text-white/70">Superpower</p>
+              <p className="text-white">Ginger</p>
             </div>
             <div className="text-[#25BED2] bg-gray-800/50 rounded-2xl p-3 col-span-2">
               <p>
@@ -74,8 +75,8 @@ export default function Passport() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col text-white mx-15 text-center mb-10 gap-6">
-        <h2 className="text-2xl font-bold">About the Explorer</h2>
+      <div className="text-gray-500 flex flex-col mx-15 text-center mb-10 gap-6">
+        <h2 className="text-2xl font-bold text-gray-800">About the Explorer</h2>
         <div className="text-left flex flex-col gap-4">
           <p>
             I&apos;m a Full-Stack Web Developer navigating the wild jungles of React,
