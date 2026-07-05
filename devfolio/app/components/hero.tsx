@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="bg-linear-to-b from-[#4CD8F3] to-[#0D7080] flex flex-col items-center justify-start p-10 gap-5 text-center">
+    <div className="bg-linear-to-b from-[#4CD8F3] to-[#0D7080] flex flex-col items-center justify-start p-10 pt-32 md:pt-40 gap-5 text-center">
       <div className="">
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white">
           Zack Yuan

@@ -38,7 +38,7 @@ export default function Passport() {
                 src="/zack-img.png"
                 alt="zack-image"
                 fill
-                className="object-cover"
+                className="object-cover translate-y-3 scale-130"
               />
             </div>
             <div className="flex flex-col justify-center">
@@ -53,8 +53,8 @@ export default function Passport() {
               <p className="text-white">Front-End</p>
             </div>
             <div className="">
-              <p className=" text-white/70">Favorite Technologies</p>
-              <p className="text-white">Next.js, TailwindCSS</p>
+              <p className=" text-white/70">Favorite Tools</p>
+              <p className="text-white">NextJS, TailwindCSS</p>
             </div>
             <div className="">
               <p className=" text-white/70">Base Camp</p>
@@ -91,15 +91,15 @@ export default function Passport() {
         </div>
       </div>
       <div className="flex flex-col">
-        <h2 className="text-2xl font-bold mb-10 gap-6">Certifications</h2>
-        <div className="flex flex-col">
+        <h2 className="text-2xl font-bold mb-10 gap-6 text-gray-800">Certifications</h2>
+        <div className="flex flex-col text-gray-800 font-bold text-sm text-center gap-5">
             <div className="">
-                <p>Computer Science & Full-Stack Web Development</p>
-                <p>Atlas School — December 2025</p>
+                <p className="">Computer Science & Full-Stack Web Development</p>
+                <p>Atlas School</p>
             </div>
             <div className="">
                 <p>AI Automation</p>
-                <p>OSU CFW — May 2026</p>
+                <p>OSU CFW</p>
             </div>
             <div className="">
                 <p></p>

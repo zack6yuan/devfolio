@@ -11,13 +11,13 @@ export default function NavBar() {
     ]
 
     return (
-        <nav className="sticky top-0 left-0 w-full z-50 flex justify-between items-center px-15 py-10 font-dynapuff">
+        <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-15 py-10 font-dynapuff">
             <h1 className="text-white font-bold lg:text-2xl md:text-xl text-lg uppercase">Zack Yuan</h1>
 
             <ul className="hidden lg:flex gap-6 uppercase">
                 {navItems.map((item) => (
                     <li key={item}>
-                        <Link href={`#${item.toLowerCase()}`} className="text-white">
+                        <Link href={`#${item}`} className="text-white">
                             {item}
                         </Link>
                     </li>
