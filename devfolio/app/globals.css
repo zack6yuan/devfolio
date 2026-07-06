@@ -21,6 +21,7 @@
   --font-dynapuff: var(--font-dynapuff);
   --font-google: var(--font-google);
   --font-sora: var(--font-sora);
+  --font-fraunces: var(--font-fraunces);
 
   /* 1. Register Wiggle Keyframes & Animation utility */
   --animate-wiggle: wiggle 2s ease-in-out infinite;
@@ -55,5 +56,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sora), Arial, Helvetica, sans-serif;
+  font-family: var(--font-fraunces), Arial, Helvetica, sans-serif;
 }

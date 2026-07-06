@@ -83,6 +83,7 @@ export default function Passport() {
                 alt="zack-image"
                 fill
                 className="object-cover translate-y-3 scale-130"
+                sizes=""
               />
             </div>
             <div className="flex flex-col justify-center">

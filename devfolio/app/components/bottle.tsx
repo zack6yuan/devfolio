@@ -16,12 +16,12 @@ import {
     return (
       <div className="flex flex-col items-center gap-8 pt-15 pb-10 px-2 sm:px-4 bg-[#FCF5E1] min-h-screen">
         <div className="flex flex-col items-center gap-2">
-          <p className="text-5xl animate-wiggle">🎒</p>
+          <p className="text-5xl animate-wiggle">🍾</p>
           <h1 className="text-3xl md:text-4xl text-gray-800 font-bold text-center">
-            The Explorer&apos;s Backpack
+            Send a Bottle Dispatch
           </h1>
           <p className="text-gray-500 text-center">
-            Gear I carry on every adventure
+            Drop your message in the ocean — I'll fish it out!
           </p>
         </div>
   
