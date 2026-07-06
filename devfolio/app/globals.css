@@ -5,6 +5,14 @@
   --foreground: #171717;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Tailwind v4 Config Theme Block */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -13,28 +21,37 @@
   --font-dynapuff: var(--font-dynapuff);
   --font-google: var(--font-google);
   --font-sora: var(--font-sora);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* 1. Register Wiggle Keyframes & Animation utility */
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(7deg);
+    }
+  }
+
+  /* 2. Register Icon Bounce Keyframes & Animation utility */
+  --animate-icon-bounce: icon-bounce 0.5s ease-in-out;
+  @keyframes icon-bounce {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    30% {
+      transform: translateY(-8px) scale(1.05); /* Rise up and stretch */
+    }
+    50% {
+      transform: translateY(0) scale(0.95, 1.05); /* Snap down slightly */
+    }
+    70% {
+      transform: translateY(-3px) scale(1.02); /* Minor secondary bounce */
+    }
   }
 }
 
-@keyframes wiggle {
-  0%, 100% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(7deg);
-  }
-}
-
-.animate-wiggle {
-  animation: wiggle 2s ease-in-out infinite;
-}
-
+/* Base DOM Styles */
 body {
   background: var(--background);
   color: var(--foreground);

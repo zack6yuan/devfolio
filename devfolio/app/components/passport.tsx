@@ -150,7 +150,7 @@ export default function Passport() {
             return (
               <div
                 key={cert.label}
-                className={`flex items-center gap-2 border-2 ${styles.border} ${styles.bg} rounded-full px-5 py-3`}
+                className={`flex items-center gap-2 border-2 ${styles.border} ${styles.bg} rounded-2xl px-5 py-3`}
               >
                 <span className={styles.text}>{cert.icon}</span>
                 <p className={`font-bold text-sm ${styles.text}`}>{cert.label}</p>
