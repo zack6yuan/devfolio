@@ -6,7 +6,7 @@ export default function About() {
         <p className="text-gray-500 text-sm font-bold">ABOUT</p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
         DESIGN<span className="text-orange-500">+</span>DEVELOPMENT
       </h1>
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left md:text-left">
