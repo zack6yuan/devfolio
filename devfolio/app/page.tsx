@@ -6,6 +6,7 @@ import About from "./components/about";
 import Bottle from "./components/bottle";
 import StackBanner from "./components/StackBanner";
 import Work from "./components/work";
+import Toolkit from "./components/toolkit";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <StackBanner />
       <About />
       <Work />
+      <Toolkit />
       <Archipelago />
       <Backpack />
       <Bottle />
