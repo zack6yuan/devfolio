@@ -1,36 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DynaPuff, Google_Sans, Sora, Fraunces } from "next/font/google";
+import { Sora, JetBrains_Mono, Archivo_Black } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const googleSans = Google_Sans({
-  variable: "--font-google",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const dynaPuff = DynaPuff({
-  variable: "--font-dynapuff",
-  subsets: ["latin"],
-})
 
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
 })
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400"],
+})
+
+const black = Archivo_Black({
+  weight: "400",
+  variable: "--font-black",
+  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
@@ -46,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${googleSans.variable} ${dynaPuff.variable} ${sora.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${sora.variable}  ${mono.variable} ${black.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

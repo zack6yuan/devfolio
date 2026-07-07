@@ -47,7 +47,7 @@ const certifications: VisaStamp[] = [
 
 export default function Passport() {
   return (
-    <div className="flex flex-col items-center gap-5 pt-15 bg-[#FCF5E1]">
+    <div className="flex flex-col items-center gap-5 pt-15 bg-black">
       <p className="text-5xl animate-wiggle">📔</p>
       <h1 className="text-4xl text-gray-800 font-bold">The Explorer&apos;s Passport</h1>
       <p className="text-gray-500">Identity verified by the Dev Islands Authority</p>
