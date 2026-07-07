@@ -2,9 +2,10 @@ import Backpack from "./components/backpack";
 import Archipelago from "./components/archipelago";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
-import Passport from "./components/about";
+import About from "./components/about";
 import Bottle from "./components/bottle";
 import StackBanner from "./components/StackBanner";
+import Work from "./components/work";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <NavBar />
       <Hero />
       <StackBanner />
-      <Passport />
+      <About />
+      <Work />
       <Archipelago />
       <Backpack />
       <Bottle />
