@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="text-left bg-black flex flex-col items-start justify-start p-6 sm:p-10 pt-24 sm:pt-32 md:pt-40 gap-5 w-full">
+    <div className="text-left bg-black flex flex-col items-start justify-start p-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
       <div className="flex flex-col w-full">
         <div className="flex justify-between items-start sm:items-center font-mono text-xs py-5 gap-2 sm:gap-0 w-full">
           <div className="flex flex-col gap-1 text-xs">
@@ -34,7 +34,9 @@ export default function Hero() {
 
       <div className="flex flex-col items-start gap-3 text-gray-400 font-bold">
         <p className="font-mono text-xs">SCROLL</p>
-        <ArrowDown size={20} className="animate-bounce" />
+        <a href="#about">
+          <ArrowDown size={20} className="animate-bounce" />
+        </a>
       </div>
     </div>
   );

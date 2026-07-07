@@ -7,6 +7,7 @@ import Bottle from "./components/bottle";
 import StackBanner from "./components/StackBanner";
 import Work from "./components/work";
 import Toolkit from "./components/toolkit";
+import Experience from "./components/experience";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Work />
       <Toolkit />
+      <Experience />
       <Archipelago />
       <Backpack />
       <Bottle />
