@@ -2,7 +2,7 @@ import Backpack from "./components/backpack";
 import Archipelago from "./components/archipelago";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
-import Passport from "./components/passport";
+import Passport from "./components/about";
 import Bottle from "./components/bottle";
 import StackBanner from "./components/StackBanner";
 
