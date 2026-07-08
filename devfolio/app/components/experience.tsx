@@ -40,7 +40,7 @@ export default function Experience() {
               <p className="font-sora font-bold text-lg lg:text-2xl">Full-Stack Web Development</p>
               <p className="text-sm lg:text-base text-white">Atlas School</p>
               <p className="text-sm lg:text-base text-gray-400 mt-1">
-              A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps
+              A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps.
               </p>
             </div>
             <div className="w-28 shrink-0 sm:text-right">
