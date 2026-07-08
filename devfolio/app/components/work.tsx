@@ -36,7 +36,7 @@ export default function Work() {
             The culmination of my 20 months at Atlas School — a real-time aerial
             combat battle simulator. 3D-printed RC planes carry H7 cameras that
             lock onto each other's lights, send hit confirmations to the server
-            over WebSockets, and alert the app instantly
+            over WebSockets, and alert the app instantly.
           </p>
           <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags1.map((tag, x) => (
