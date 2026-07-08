@@ -11,7 +11,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-2 text-xs">
             <div className="bg-orange-500 h-2 w-2 rounded-full animate-pulse"></div>
-            <p>NOT AVAILABLE — 2026</p>
+            <p>NOT CURRENTLY AVAILABLE</p>
           </div>
         </div>
 

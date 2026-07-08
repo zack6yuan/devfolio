@@ -1,13 +1,11 @@
-import Backpack from "./components/backpack";
-import Archipelago from "./components/archipelago";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
 import About from "./components/about";
-import Bottle from "./components/bottle";
 import StackBanner from "./components/StackBanner";
 import Work from "./components/work";
 import Toolkit from "./components/toolkit";
 import Experience from "./components/experience";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -19,9 +17,7 @@ export default function Home() {
       <Work />
       <Toolkit />
       <Experience />
-      <Archipelago />
-      <Backpack />
-      <Bottle />
+      <Contact />
     </div>
   );
 }
