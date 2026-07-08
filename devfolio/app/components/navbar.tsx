@@ -5,7 +5,7 @@ import Link from "next/link";
 import DecryptedText from "@/components/DecryptedText";
 
 export default function NavBar() {
-  const navItems = ["Home", "About", "Projects", "Skills", "Contact"];
+  const navItems = ["About", "Projects", "Skills", "Experience", "Contact"];
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
