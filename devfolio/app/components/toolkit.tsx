@@ -63,6 +63,10 @@ function MarqueeRow({
     isDragging.current = false;
   };
 
+  // Repeat the set enough times that one half of the track always exceeds the
+  // viewport (incl. ultra-wide/4K), so the seamless loop never reveals a gap.
+  const loop = Array.from({ length: 6 }).flatMap(() => items);
+
   return (
     <div
       className="w-full overflow-hidden cursor-grab active:cursor-grabbing select-none touch-pan-y"
@@ -74,7 +78,7 @@ function MarqueeRow({
       onMouseLeave={() => setIsPaused(false)}
     >
       <div ref={trackRef} className="flex gap-3 w-max will-change-transform">
-        {items.map((tool, x) => (
+        {loop.map((tool, x) => (
           <div
             key={`a-${x}`}
             className="border border-white/20 py-2 px-4 rounded-sm font-sora text-sm shrink-0 whitespace-nowrap"
@@ -82,7 +86,7 @@ function MarqueeRow({
             {tool}
           </div>
         ))}
-        {items.map((tool, x) => (
+        {loop.map((tool, x) => (
           <div
             key={`b-${x}`}
             className="border border-white/20 py-2 px-4 rounded-sm font-sora text-sm shrink-0 whitespace-nowrap"
@@ -118,12 +122,12 @@ export default function Toolkit() {
   return (
     <div id="skills" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
-        <p className="text-orange-500 text-md">03</p>
+        <p className="text-orange-500 text-base">03</p>
         <p className="text-gray-500 text-sm font-bold">TOOLKIT</p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
 
-      <h1 className="text-4xl w-full lg:w-1/2 text-left sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
+      <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
         TECHNICAL ARSENAL
       </h1>
 

@@ -19,9 +19,8 @@ There is no test suite configured (no test script, no Jest/Vitest config).
 
 This is a single-page portfolio site built with Next.js App Router (`app/`). Everything renders
 off one route: `app/page.tsx` composes the whole page by stacking section components in order
-(`NavBar`, `Hero`, `StackBanner`, `About`, `Work`, `Toolkit`, `Experience`, `Contact`, plus
-decorative components `Archipelago`, `Backpack`, `Bottle`). To add or reorder a section, edit
-`app/page.tsx` and drop a component in `app/components/`.
+(`NavBar`, `Hero`, `StackBanner`, `About`, `Work`, `Toolkit`, `Experience`, `Contact`, `Footer`).
+To add or reorder a section, edit `app/page.tsx` and drop a component in `app/components/`.
 
 Fonts (Sora, JetBrains Mono, Archivo Black) are loaded via `next/font/google` in `app/layout.tsx`
 and exposed as CSS variables (`--font-sora`, `--font-mono`, `--font-black`) consumed through the
@@ -32,11 +31,3 @@ project uses Tailwind v4's CSS-first config, not `tailwind.config.ts`.
 `ProjectCard.tsx` takes an `accent` prop (`teal | orange | green | brown`) mapped to a style
 record for border/gradient/tag colors — follow this pattern rather than inlining conditional
 Tailwind classes when adding new accent-driven variants.
-
-### Legacy `src/` directory
-
-`src/` is a leftover pre-Next.js implementation of this portfolio (Vite + React Router, multiple
-pages: Home/About/Experience/Projects/HireMe). It is not part of the active app — Next.js only
-builds from `app/`. `vite.config.js`, `index.html`, and `eslint.config.js` at the repo root belong
-to this legacy app, not the current one. Don't extend `src/`; treat it as reference-only unless
-told otherwise. Active work happens in `app/`, which uses `eslint.config.mjs`.

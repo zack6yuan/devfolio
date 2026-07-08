@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-zinc-50 dark:bg-black">
+    <div className="min-h-screen flex flex-col bg-zinc-50 dark:bg-black overflow-x-hidden">
       <NavBar />
       <Hero />
       <StackBanner />

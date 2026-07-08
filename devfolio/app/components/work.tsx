@@ -7,14 +7,17 @@ export default function Work() {
     <div id="projects">
       <div className="flex flex-col items-start gap-5 pt-12 sm:pt-15 px-5 bg-black">
         <div className="flex items-center gap-3 font-mono w-full">
-          <p className="text-orange-500 text-md">02</p>
+          <p className="text-orange-500 text-base">02</p>
           <p className="text-gray-500 text-sm font-bold">SELECTED WORK</p>
         </div>
+        <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
+          PROJECTS
+        </h1>
         <hr className="border-t border-white/20 w-full my-5" />
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">01</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
               AERODUEL
             </h1>
           </div>
@@ -26,14 +29,14 @@ export default function Work() {
             />
           </a>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-md sm:text-base text-left px-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-base text-left">
           <p className="text-white/60 flex-1">
             The culmination of my 20 months at Atlas School — a real-time aerial
             combat battle simulator. 3D-printed RC planes carry H7 cameras that
             lock onto each other's lights, send hit confirmations to the server
             over WebSockets, and alert the app instantly
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags1.map((tag, x) => (
               <div
                 className="rounded-full py-1 px-3 border border-gray-500/60 text-[12px] font-mono whitespace-nowrap"
@@ -52,7 +55,7 @@ export default function Work() {
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">02</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
               INTERPARTS
             </h1>
           </div>
@@ -64,14 +67,14 @@ export default function Work() {
             />
           </a>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-md sm:text-base text-left px-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-base text-left">
           <p className="text-white/60 flex-1">
             A landing page built for my family's 45+ year auto parts shop
             on Route 66. Built with Next.js, TypeScript, and Tailwind CSS v4,
             featuring a custom navy-and-gold brand, star ratings, and Google
             Maps integration.
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags2.map((tag, x) => (
               <div
                 className="rounded-full py-1 px-3 border border-gray-500/60 text-[12px] font-mono whitespace-nowrap"

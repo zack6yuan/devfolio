@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div id="home" className="text-left bg-black flex flex-col items-start justify-start p-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
       <div className="flex flex-col w-full">
-        <div className="flex justify-between items-start sm:items-center font-mono text-xs lg:text-sm xl:text-base py-5 gap-2 sm:gap-0 w-full">
+        <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center font-mono text-xs lg:text-sm xl:text-base py-5 gap-3 sm:gap-0 w-full">
           <div className="flex flex-col gap-1">
             <p>FULL-STACK WEB DEVELOPER</p>
             <p>& UX / UI DESIGNER</p>

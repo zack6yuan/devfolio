@@ -44,23 +44,20 @@ export default function Contact() {
   return (
     <div id="contact" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
-        <p className="text-orange-500 text-md">05</p>
+        <p className="text-orange-500 text-base">05</p>
         <p className="text-gray-500 text-sm font-bold">CONTACT</p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
-      <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left wrap-break-word">
         LET&apos;S CREATE SOMETHING<br /><GradientText
           colors={["#FF4D00", "#FFAA00"]}
           animationSpeed={6}
           className="inline-flex! m-0! max-w-none! rounded-none! font-extrabold! cursor-default! backdrop-blur-none! overflow-visible!"
         >EXCEPTIONAL</GradientText><span className="text-orange-500">.</span>
       </h1>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left md:text-left">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-base text-left md:text-left">
         <p className="text-white">
-          Right now I'm heads-down and not actively looking for new roles — but that doesn't mean the door's closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting.
-        </p>
-        <p className="text-white/60">
-          Based in Tulsa, working from wherever the wifi's good. Reach out, and let's see where it goes.
+          Right now I'm heads-down and not actively looking for new roles — but that doesn't mean the door's closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting. Based in Tulsa, working from wherever the wifi's good. Reach out, and let's see where it goes.
         </p>
       </div>
 
