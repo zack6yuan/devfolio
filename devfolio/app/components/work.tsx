@@ -1,4 +1,6 @@
 import { ArrowRight } from "lucide-react";
+import DecryptedText from "@/components/DecryptedText";
+import RevealHeading from "./RevealHeading";
 
 export default function Work() {
   const tags1 = ["WEBSOCKETS", "REAL-TIME", "HARDWARE", "CAPSTONE"];
@@ -8,10 +10,10 @@ export default function Work() {
       <div className="flex flex-col items-start gap-5 pt-12 sm:pt-15 px-5 bg-black">
         <div className="flex items-center gap-3 font-mono w-full">
           <p className="text-orange-500 text-base">02</p>
-          <p className="text-gray-500 text-sm font-bold">SELECTED WORK</p>
+          <p className="text-gray-500 text-sm font-bold"><DecryptedText text="SELECTED WORK" animateOn="inViewHover" /></p>
         </div>
         <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
-          PROJECTS
+          <RevealHeading text="PROJECTS" />
         </h1>
         <hr className="border-t border-white/20 w-full my-5" />
         <div className="flex items-center gap-3 w-full justify-between pr-5">

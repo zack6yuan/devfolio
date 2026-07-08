@@ -2,6 +2,7 @@
 
 import { useState, SubmitEvent } from "react";
 import GradientText from "@/components/GradientText";
+import DecryptedText from "@/components/DecryptedText";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -45,7 +46,7 @@ export default function Contact() {
     <div id="contact" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
         <p className="text-orange-500 text-base">05</p>
-        <p className="text-gray-500 text-sm font-bold">CONTACT</p>
+        <p className="text-gray-500 text-sm font-bold"><DecryptedText text="CONTACT" animateOn="inViewHover" /></p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left wrap-break-word">

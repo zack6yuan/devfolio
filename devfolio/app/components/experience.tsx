@@ -1,14 +1,17 @@
+import DecryptedText from "@/components/DecryptedText";
+import RevealHeading from "./RevealHeading";
+
 export default function Experience() {
     return (
       <div id="experience" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
         <div className="flex items-center gap-3 font-mono w-full">
           <p className="text-orange-500 text-base">04</p>
-          <p className="text-gray-500 text-sm font-bold">EXPERIENCE & EDUCATION</p>
+          <p className="text-gray-500 text-sm font-bold"><DecryptedText text="EXPERIENCE & EDUCATION" animateOn="inViewHover" /></p>
           <hr className="border-t border-white/20 flex-1" />
         </div>
   
         <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold wrap-break-word">
-          EXPERIENCE<span className="text-orange-500">+</span>EDUCATION
+          <RevealHeading text="EXPERIENCE+EDUCATION" accentClass="[&:nth-child(11)]:text-orange-500" />
         </h1>
 
         <div className="flex flex-col gap-8 font-sora w-full text-sm sm:text-base text-left">

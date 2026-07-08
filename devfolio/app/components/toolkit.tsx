@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import DecryptedText from "@/components/DecryptedText";
+import RevealHeading from "./RevealHeading";
 
 function MarqueeRow({
   items,
@@ -123,12 +125,12 @@ export default function Toolkit() {
     <div id="skills" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
         <p className="text-orange-500 text-base">03</p>
-        <p className="text-gray-500 text-sm font-bold">TOOLKIT</p>
+        <p className="text-gray-500 text-sm font-bold"><DecryptedText text="TOOLKIT" animateOn="inViewHover" /></p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
 
       <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
-        TECHNICAL ARSENAL
+        <RevealHeading text="TECHNICAL ARSENAL" />
       </h1>
 
       <hr className="border-t border-white/20 w-full" />

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import DecryptedText from "@/components/DecryptedText";
 
 export default function NavBar() {
   const navItems = ["Home", "About", "Projects", "Skills", "Contact"];
@@ -40,7 +41,7 @@ export default function NavBar() {
       <h1 className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-tight">
         {" "}
         <span className="hover:text-orange-500 transition-colors cursor-pointer">
-          zack yuan
+          <DecryptedText text="zack yuan" animateOn="inViewHover" />
         </span>
         .
       </h1>
