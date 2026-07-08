@@ -9,9 +9,9 @@ export default function About() {
         <p className="text-gray-500 text-sm font-bold"><DecryptedText text="ABOUT" animateOn="inViewHover" /></p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-left wrap-break-word">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-left wrap-break-word">
         <RevealHeading text="DESIGN+DEVELOPMENT" accentClass="[&:nth-child(7)]:text-orange-500" />
-      </h1>
+      </h2>
       <div className="flex flex-col gap-8 lg:gap-10 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl 2xl:max-w-5xl">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm sm:text-base lg:text-lg xl:text-xl text-left">
           <p className="text-white flex-1">

@@ -49,13 +49,13 @@ export default function Contact() {
         <p className="text-gray-500 text-sm font-bold"><DecryptedText text="CONTACT" animateOn="inViewHover" /></p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left wrap-break-word">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left wrap-break-word">
         LET&apos;S CREATE SOMETHING<br /><GradientText
           colors={["#FF4D00", "#FFAA00"]}
           animationSpeed={6}
           className="inline-flex! m-0! max-w-none! rounded-none! font-extrabold! cursor-default! backdrop-blur-none! overflow-visible!"
         >EXCEPTIONAL</GradientText><span className="text-orange-500">.</span>
-      </h1>
+      </h2>
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-base text-left md:text-left">
         <p className="text-white">
           Right now I'm heads-down and not actively looking for new roles — but that doesn't mean the door's closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting. Based in Tulsa, working from wherever the wifi's good. Reach out, and let's see where it goes.

@@ -10,9 +10,9 @@ export default function Experience() {
           <hr className="border-t border-white/20 flex-1" />
         </div>
   
-        <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold wrap-break-word tracking-tighter sm:tracking-normal">
+        <h2 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold wrap-break-word tracking-tighter sm:tracking-normal">
           <RevealHeading text="EXPERIENCE+EDUCATION" accentClass="[&:nth-child(11)]:text-orange-500" />
-        </h1>
+        </h2>
 
         <div className="flex flex-col gap-8 font-sora w-full text-sm sm:text-base text-left">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
