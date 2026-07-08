@@ -116,7 +116,7 @@ export default function Toolkit() {
   const rowTwo = tools.slice(7);
 
   return (
-    <div className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
+    <div id="skills" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
         <p className="text-orange-500 text-md">03</p>
         <p className="text-gray-500 text-sm font-bold">TOOLKIT</p>

@@ -8,7 +8,7 @@ export default function Experience() {
         </div>
   
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
-          DESIGN<span className="text-orange-500">+</span>DEVELOPMENT
+          EXPERIENCE<span className="text-orange-500">+</span>EDUCATION
         </h1>
   
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left">

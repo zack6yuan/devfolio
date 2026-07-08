@@ -6,6 +6,7 @@ import Work from "./components/work";
 import Toolkit from "./components/toolkit";
 import Experience from "./components/experience";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Toolkit />
       <Experience />
       <Contact />
+      <Footer />
     </div>
   );
 }

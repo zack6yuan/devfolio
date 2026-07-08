@@ -4,7 +4,7 @@ export default function Work() {
   const tags1 = ["WEBSOCKETS", "REAL-TIME", "HARDWARE", "CAPSTONE"];
   const tags2 = ["NEXTJS", "TYPESCRIPT", "TAILWINDCSS", "FORMSPREE", "VERCEL"];
   return (
-    <div>
+    <div id="projects">
       <div className="flex flex-col items-start gap-5 pt-12 sm:pt-15 px-5 bg-black">
         <div className="flex items-center gap-3 font-mono w-full">
           <p className="text-orange-500 text-md">02</p>

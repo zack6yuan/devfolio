@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, SubmitEvent } from "react";
+import GradientText from "@/components/GradientText";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -41,14 +42,18 @@ export default function Contact() {
   };
 
   return (
-    <div id="about" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
+    <div id="contact" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
       <div className="flex items-center gap-3 font-mono w-full">
         <p className="text-orange-500 text-md">05</p>
         <p className="text-gray-500 text-sm font-bold">CONTACT</p>
         <hr className="border-t border-white/20 flex-1" />
       </div>
-      <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-black font-bold text-left">
-        LET&apos;S CREATE SOMETHING<br /><span className="[-webkit-text-stroke:0.1px_white] text-transparent">EXCEPTIONAL</span><span className="text-orange-500">.</span>
+      <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-manrope font-extrabold text-left">
+        LET&apos;S CREATE SOMETHING<br /><GradientText
+          colors={["#FF4D00", "#FFAA00"]}
+          animationSpeed={6}
+          className="inline-flex! m-0! max-w-none! rounded-none! font-extrabold! cursor-default! backdrop-blur-none! overflow-visible!"
+        >EXCEPTIONAL</GradientText><span className="text-orange-500">.</span>
       </h1>
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left md:text-left">
         <p className="text-white">
@@ -108,7 +113,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="mt-2 self-start bg-orange-500 text-white font-bold rounded-2xl py-2.5 px-8 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-2 self-start bg-orange-500 text-white rounded-lg py-2.5 px-8 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "sending" ? "Sending..." : "Send Message"}
         </button>
