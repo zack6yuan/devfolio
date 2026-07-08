@@ -56,7 +56,7 @@ export default function Contact() {
           className="inline-flex! m-0! max-w-none! rounded-none! font-extrabold! cursor-default! backdrop-blur-none! overflow-visible!"
         >EXCEPTIONAL</GradientText><span className="text-orange-500">.</span>
       </h2>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-base text-left md:text-left">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-base lg:text-lg xl:text-xl text-left md:text-left">
         <p className="text-white">
           Right now I'm heads-down and not actively looking for new roles — but that doesn't mean the door's closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting. Based in Tulsa, working from wherever the wifi's good. Reach out, and let's see where it goes.
         </p>
