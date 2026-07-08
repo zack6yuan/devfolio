@@ -26,12 +26,16 @@ export default function About() {
             <p className="text-sm font-mono text-gray-400">IMMERSIVE PROGRAM</p>
           </div>
           <div className="flex flex-col">
-            <p className="font-sora font-bold">Full-Stack</p>
+            <p className="font-sora font-bold">Full<span className="text-orange-500">-</span>Stack</p>
             <p className="text-sm font-mono text-gray-400">FRONT · BACK · DEVOPS</p>
           </div>
           <div className="flex flex-col">
             <p className="font-sora font-bold">Web<span className="text-orange-500">+</span>Mobile</p>
             <p className="text-sm font-mono text-gray-400">REACT & REACT NATIVE</p>
+          </div>
+          <div className="flex flex-col">
+            <p className="font-sora font-bold">AI<span className="text-orange-500">-</span>Powered Workflows</p>
+            <p className="text-sm font-mono text-gray-400">AUGMENTED, NOT AUTOMATED</p>
           </div>
         </div>
       </div>
