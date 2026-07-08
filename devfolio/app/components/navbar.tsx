@@ -37,7 +37,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full z-50 flex justify-between items-center pl-6 pr-10 py-10 bg-black relative">
-      <h1 className="text-white font-bold lg:text-2xl md:text-xl text-2xl tracking-tight">
+      <h1 className="font-sora text-white font-bold lg:text-2xl md:text-xl text-2xl tracking-tight">
         {" "}
         <span className="hover:text-orange-500 transition-colors cursor-pointer">
           zack yuan
