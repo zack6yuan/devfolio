@@ -37,7 +37,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full z-50 flex justify-between items-center pl-6 pr-10 py-10 bg-black relative">
-      <h1 className="font-sora text-white font-bold lg:text-2xl md:text-xl text-2xl tracking-tight">
+      <h1 className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-tight">
         {" "}
         <span className="hover:text-orange-500 transition-colors cursor-pointer">
           zack yuan
@@ -48,7 +48,10 @@ export default function NavBar() {
       <ul className="hidden lg:flex gap-6 uppercase">
         {navItems.map((item) => (
           <li key={item}>
-            <Link href={`#${item.toLowerCase()}`} className="text-white">
+            <Link
+              href={`#${item.toLowerCase()}`}
+              className="relative text-white after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-orange-500 after:transition-transform after:duration-300 after:ease-out after:content-[''] hover:after:scale-x-100"
+            >
               {item}
             </Link>
           </li>

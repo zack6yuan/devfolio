@@ -7,36 +7,42 @@ export default function Experience() {
           <hr className="border-t border-white/20 flex-1" />
         </div>
   
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
           EXPERIENCE<span className="text-orange-500">+</span>EDUCATION
         </h1>
-  
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left">
-          <div className="w-24 shrink-0">
-            <p className="font-mono text-sm text-orange-500 font-bold">PRESENT</p>
+
+        <div className="flex flex-col gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-md sm:text-base text-left">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+            <div className="w-24 shrink-0">
+              <p className="font-mono text-sm text-orange-500 font-bold">PRESENT</p>
+            </div>
+            <div className="flex flex-col flex-1">
+              <p className="font-sora font-bold text-lg">Web Developer</p>
+              <p className="text-sm text-white">Leadline Performance Marketing</p>
+              <p className="text-sm text-gray-400 mt-1">
+                Building and shipping full-stack web experiences — turning
+                marketing strategy into fast, reliable, design-minded product.
+              </p>
+            </div>
+            <div className="w-28 shrink-0 sm:text-right">
+              <p className="font-mono text-sm text-gray-500 font-bold">TULSA, OK</p>
+            </div>
           </div>
-  
-          <div className="flex flex-col flex-1">
-            <p className="font-sora font-bold text-lg">Web Developer</p>
-            <p className="text-sm text-white">Leadline Performance Marketing</p>
-            <p className="text-sm text-gray-400 mt-1">
-              Building and shipping full-stack web experiences — turning
-              marketing strategy into fast, reliable, design-minded product.
-            </p>
-          </div>
-          <div className="w-28 shrink-0 sm:text-right">
-            <p className="font-mono text-sm text-gray-500 font-bold">TULSA, OK</p>
-          </div>
-          <hr className="border-t border-white/20 flex-1" />
-          <div className="flex flex-col flex-1">
-            <p className="font-sora font-bold text-lg">Full-Stack Web Development</p>
-            <p className="text-sm text-white">Atlas School</p>
-            <p className="text-sm text-gray-400 mt-1">
-            A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps
-            </p>
-          </div>
-          <div className="w-28 shrink-0 sm:text-right">
-            <p className="font-mono text-sm text-gray-500 font-bold">TULSA, OK</p>
+
+          <hr className="border-t border-white/20" />
+
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+            <div className="w-24 shrink-0 hidden sm:block" aria-hidden="true" />
+            <div className="flex flex-col flex-1">
+              <p className="font-sora font-bold text-lg">Full-Stack Web Development</p>
+              <p className="text-sm text-white">Atlas School</p>
+              <p className="text-sm text-gray-400 mt-1">
+              A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps
+              </p>
+            </div>
+            <div className="w-28 shrink-0 sm:text-right">
+              <p className="font-mono text-sm text-gray-500 font-bold">TULSA, OK</p>
+            </div>
           </div>
         </div>
       </div>

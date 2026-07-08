@@ -33,7 +33,7 @@ export default function Work() {
             lock onto each other's lights, send hit confirmations to the server
             over WebSockets, and alert the app instantly
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {tags1.map((tag, x) => (
               <div
                 className="rounded-full py-1 px-3 border border-gray-500/60 text-[12px] font-mono whitespace-nowrap"

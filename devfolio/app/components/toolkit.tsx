@@ -123,7 +123,7 @@ export default function Toolkit() {
         <hr className="border-t border-white/20 flex-1" />
       </div>
 
-      <h1 className="text-4xl w-[50%] text-left sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
+      <h1 className="text-4xl w-full lg:w-1/2 text-left sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
         TECHNICAL ARSENAL
       </h1>
 
