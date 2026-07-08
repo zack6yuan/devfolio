@@ -105,9 +105,12 @@ export default function Toolkit() {
   const tools = [
     "React",
     "React Native",
-    "NextJS",
+    "Next.js",
     "TypeScript",
     "TailwindCSS",
+    "Python",
+    "Flask",
+    "Express.js",
     "Vercel",
     "AI Workflows",
     "Claude Code",
@@ -116,6 +119,7 @@ export default function Toolkit() {
     "ACF",
     "YooTheme",
     "Gravity Forms",
+    "MCP",
   ];
 
   const rowOne = tools.slice(0, 7);
