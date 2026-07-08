@@ -105,9 +105,12 @@ export default function Toolkit() {
   const tools = [
     "React",
     "React Native",
-    "NextJS",
+    "Next.js",
     "TypeScript",
     "TailwindCSS",
+    "Python",
+    "Flask",
+    "Express.js",
     "Vercel",
     "AI Workflows",
     "Claude Code",
@@ -116,6 +119,7 @@ export default function Toolkit() {
     "ACF",
     "YooTheme",
     "Gravity Forms",
+    "MCP",
   ];
 
   const rowOne = tools.slice(0, 7);
@@ -129,9 +133,9 @@ export default function Toolkit() {
         <hr className="border-t border-white/20 flex-1" />
       </div>
 
-      <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
+      <h2 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
         <RevealHeading text="TECHNICAL ARSENAL" />
-      </h1>
+      </h2>
 
       <hr className="border-t border-white/20 w-full" />
       <MarqueeRow items={rowOne} direction={-1} speed={40} />

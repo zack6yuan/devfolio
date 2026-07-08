@@ -1,0 +1,31 @@
+# Zack Yuan
+
+> Full-Stack Web Developer & UX/UI Designer based in Tulsa, OK. I build fast, design-minded web and mobile apps with React, React Native, Next.js, TypeScript, and Tailwind CSS.
+
+Zack Yuan is a Computer Science graduate of Atlas School (Tulsa, Oklahoma) who works across the whole stack — front-end, back-end, and DevOps — with a strong focus on design. Currently a Web Developer at Leadline Performance Marketing.
+
+## About
+
+- [Portfolio](https://zackyuan.dev): Single-page portfolio covering about, projects, skills, experience, and contact.
+
+## Projects
+
+- [AERODUEL](https://www.github.com/aeroduel): Capstone project — a real-time aerial combat battle simulator. 3D-printed RC planes carry H7 cameras that lock onto each other's lights and send hit confirmations to the server over WebSockets. Tech: WebSockets, real-time, hardware.
+- [Interparts of Tulsa](https://www.github.com/zack6yuan/interparts-of_tulsa): Landing page for a 45+ year family auto parts shop on Route 66, with a custom navy-and-gold brand, star ratings, and Google Maps integration. Tech: Next.js, TypeScript, Tailwind CSS, Formspree, Vercel.
+
+## Skills
+
+- Languages & frameworks: React, React Native, Next.js, TypeScript, Python, Flask, Express.js, Tailwind CSS
+- Platforms & tooling: Vercel, WordPress, Kinsta, ACF, YooTheme, Gravity Forms
+- Workflow: AI-augmented development (Claude Code)
+
+## Experience
+
+- Web Developer — Leadline Performance Marketing (Tulsa, OK), present: Building and shipping full-stack web experiences, turning marketing strategy into fast, reliable, design-minded product.
+- Full-Stack Web Development — Atlas School (Tulsa, OK): Peer-and-project-based software engineering program spanning C programming through full-stack web development (front-end, back-end, DevOps).
+
+## Contact
+
+- [Email](mailto:zack6yuan@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/zack6yuan)
+- [GitHub](https://www.github.com/zack6yuan)

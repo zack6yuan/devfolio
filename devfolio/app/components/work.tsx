@@ -12,16 +12,16 @@ export default function Work() {
           <p className="text-orange-500 text-base">02</p>
           <p className="text-gray-500 text-sm font-bold"><DecryptedText text="SELECTED WORK" animateOn="inViewHover" /></p>
         </div>
-        <h1 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
+        <h2 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
           <RevealHeading text="PROJECTS" />
-        </h1>
+        </h2>
         <hr className="border-t border-white/20 w-full my-5" />
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">01</p>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
               AERODUEL
-            </h1>
+            </h3>
           </div>
           <a href="https:/www.github.com/aeroduel">
             <ArrowRight
@@ -57,9 +57,9 @@ export default function Work() {
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">02</p>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
               INTERPARTS
-            </h1>
+            </h3>
           </div>
           <a href="https://www.github.com/zack6yuan/interparts-of_tulsa">
             <ArrowRight

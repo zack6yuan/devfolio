@@ -1,25 +1,40 @@
-import { Astroid } from 'lucide-react';
+import { Astroid } from "lucide-react";
 
 export default function StackBanner() {
-    const tools = [
-        "React", "React Native", "NextJS", "TypeScript", "TailwindCSS",
-        "Vercel", "AI Workflows", "Claude Code", "WordPress", "Kinsta",
-        "ACF", "YooTheme", "Gravity Forms"
-    ]
+  const tools = [
+    "React",
+    "React Native",
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Python",
+    "Flask",
+    "Express.js",
+    "Vercel",
+    "AI Workflows",
+    "Claude Code",
+    "WordPress",
+    "Kinsta",
+    "ACF",
+    "YooTheme",
+    "Gravity Forms",
+    "MCP",
+  ];
 
-    const renderTools = () => tools.map((tool, k) => (
-        <div key={k} className="flex items-center gap-3 shrink-0">
-            <p className="text-sm xl:text-base">{tool}</p>
-            <Astroid className="w-[15px] h-[15px] xl:w-[18px] xl:h-[18px] fill-orange-500 text-orange-500" />
-        </div>
-    ))
+  const renderTools = () =>
+    tools.map((tool, k) => (
+      <div key={k} className="flex items-center gap-3 shrink-0">
+        <p className="text-sm xl:text-base">{tool}</p>
+        <Astroid className="w-[15px] h-[15px] xl:w-[18px] xl:h-[18px] fill-orange-500 text-orange-500" />
+      </div>
+    ));
 
-    return (
-        <div className="w-full overflow-hidden bg-black-500 border-t border-b border-gray-500/30 py-4 xl:py-6">
-            <div className="flex gap-3 font-sora uppercase font-bold text-white animate-marquee w-max">
-                {renderTools()}
-                {renderTools()}
-            </div>
-        </div>
-    )
+  return (
+    <div className="w-full overflow-hidden bg-black-500 border-t border-b border-gray-500/30 py-4 xl:py-6">
+      <div className="flex gap-3 font-sora uppercase font-bold text-white animate-marquee w-max">
+        {renderTools()}
+        {renderTools()}
+      </div>
+    </div>
+  );
 }

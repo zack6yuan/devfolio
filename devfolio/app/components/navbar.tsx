@@ -38,13 +38,13 @@ export default function NavBar() {
 
   return (
     <nav className="w-full z-50 flex justify-between items-center pl-6 pr-10 py-6 lg:py-10 bg-black relative">
-      <h1 className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-tight">
+      <p className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-tight">
         {" "}
         <span className="hover:text-orange-500 transition-colors cursor-pointer">
           <DecryptedText text="zack yuan" animateOn="inViewHover" />
         </span>
         .
-      </h1>
+      </p>
 
       <ul className="hidden lg:flex gap-6 uppercase">
         {navItems.map((item) => (
