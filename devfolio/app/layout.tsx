@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -20,8 +21,10 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "Zack Yuan",
-  description: "Full-Stack Web Developer & UX/UI Designer based in Tulsa, OK.",
+  title: {
+    default: siteConfig.title,
+    template: `%s · ${siteConfig.name}`,
+  },
 };
 
 export default function RootLayout({
