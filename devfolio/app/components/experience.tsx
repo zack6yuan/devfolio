@@ -7,7 +7,7 @@ export default function Experience() {
           <hr className="border-t border-white/20 flex-1" />
         </div>
   
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-center">
+        <h1 className="text-3xl w-full lg:w-1/2 text-left sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white font-sora font-extrabold">
           EXPERIENCE<span className="text-orange-500">+</span>EDUCATION
         </h1>
 
