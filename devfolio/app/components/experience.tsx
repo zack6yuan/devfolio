@@ -21,7 +21,7 @@ export default function Experience() {
               <p className="font-mono text-sm lg:text-base text-orange-500 font-bold">PRESENT</p>
             </div>
             <div className="flex flex-col flex-1">
-              <p className="font-sora font-bold text-lg lg:text-2xl">Web Developer</p>
+              <p className="font-sora font-bold text-xl lg:text-3xl">Web Developer</p>
               <p className="text-sm lg:text-base text-white">Leadline Performance Marketing</p>
               <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl">
                 <ScrollReveal>
@@ -40,7 +40,7 @@ export default function Experience() {
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
             <div className="w-24 shrink-0 hidden sm:block" aria-hidden="true" />
             <div className="flex flex-col flex-1">
-              <p className="font-sora font-bold text-lg lg:text-2xl">Full-Stack Web Development</p>
+              <p className="font-sora font-bold text-xl lg:text-3xl">Computer Science & Full-Stack Web Development</p>
               <p className="text-sm lg:text-base text-white">Atlas School</p>
               <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl">
                 <ScrollReveal>

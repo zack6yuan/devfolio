@@ -60,7 +60,7 @@ export default function ProjectCard({
 
   return (
     <div className={`w-full max-w-md rounded-2xl border-3 ${styles.border} bg-white overflow-hidden shadow-lg`}>
-      <div className={`relative h-32 sm:h-40 bg-gradient-to-b ${styles.gradient} flex items-center justify-center overflow-hidden`}>
+      <div className={`relative h-32 sm:h-40 bg-linear-to-b ${styles.gradient} flex items-center justify-center overflow-hidden`}>
         {image ? (
           <Image src={image} alt={title} fill className="object-cover" />
         ) : (

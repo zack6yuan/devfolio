@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 export default function DotGrid({
   gap = 34,
   dotRadius = 1.6,
-  baseColor = "255,255,255",
+  baseColor = "0,0,0",
   baseOpacity = 0.08,
   glowColor = "255,77,0",
   proximity = 140,

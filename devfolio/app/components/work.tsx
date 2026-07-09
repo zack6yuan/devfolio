@@ -40,8 +40,8 @@ export default function Work() {
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">01</p>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
-              AERODUEL
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-manrope">
+              Aeroduel
             </h3>
           </div>
           <a href="https://aeroduel.com">
@@ -75,8 +75,8 @@ export default function Work() {
         <div className="flex items-center gap-3 w-full justify-between pr-5">
           <div className="flex items-center gap-3">
             <p className="text-gray-500 font-mono">02</p>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-sora font-extrabold">
-              INTERPARTS
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white font-manrope">
+              Interparts of Tulsa
             </h3>
           </div>
           <a href="https://www.github.com/zack6yuan/interparts-of_tulsa">
