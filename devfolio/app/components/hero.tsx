@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div id="home" className="text-left bg-black flex flex-col items-start justify-start p-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
+    <div id="home" className="text-left bg-black flex flex-col items-start justify-start px-6 pt-24 pb-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
       <div className="flex flex-col w-full">
         <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center font-mono text-xs lg:text-sm xl:text-base py-5 gap-3 sm:gap-0 w-full">
           <div className="flex flex-col gap-1">
