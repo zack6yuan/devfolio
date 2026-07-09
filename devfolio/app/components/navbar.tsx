@@ -37,8 +37,8 @@ export default function NavBar() {
   }, [menuOpen]);
 
   return (
-    <nav className="w-full z-50 flex justify-between items-center pl-6 pr-10 py-6 lg:py-10 bg-black relative">
-      <p className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-tight">
+    <nav className="w-full z-50 flex justify-between items-center px-6 sm:px-10 lg:px-16 py-6 lg:py-10 bg-black relative">
+      <p className="font-sora text-white font-bold text-2xl lg:text-3xl xl:text-4xl tracking-tight">
         {" "}
         <span className="hover:text-orange-500 transition-colors cursor-pointer">
           <DecryptedText text="zack yuan" animateOn="inViewHover" />
