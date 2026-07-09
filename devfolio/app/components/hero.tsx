@@ -17,8 +17,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="font-manrope font-extrabold uppercase text-8xl sm:text-9xl md:text-11xl 2xl:text-12xl text-white leading-[0.90] mt-5">
-          <span className="block xl:inline xl:mr-[0.25em]">Zack</span>
+        <h1 className="font-manrope font-extrabold uppercase text-8xl sm:text-9xl md:text-11xl 2xl:text-12xl text-white leading-[0.90] mt-40 sm:mt-56 md:mt-72 xl:mt-80">
+          <span className="block xl:inline">Zack</span>
           <span className="block -mt-2 md:-mt-4 xl:inline xl:mt-0">
             <span
               style={{

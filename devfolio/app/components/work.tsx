@@ -44,7 +44,7 @@ export default function Work() {
               AERODUEL
             </h3>
           </div>
-          <a href="https:/www.github.com/aeroduel">
+          <a href="https://aeroduel.com">
             <ArrowRight
               stroke="white"
               size={30}
