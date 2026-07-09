@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import DecryptedText from "@/components/DecryptedText";
 import BorderGlow from "@/components/BorderGlow";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 // A project tech tag wrapped in the React Bits BorderGlow effect. Fully rounded
@@ -53,10 +54,12 @@ export default function Work() {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-base text-left">
           <p className="text-white/60 flex-1">
-            The culmination of my 20 months at Atlas School — a real-time aerial
-            combat battle simulator. 3D-printed RC planes carry H7 cameras that
-            lock onto each other's lights, send hit confirmations to the server
-            over WebSockets, and alert the app instantly.
+            <ScrollReveal>
+              The culmination of my 20 months at Atlas School — a real-time aerial
+              combat battle simulator. 3D-printed RC planes carry H7 cameras that
+              lock onto each other&apos;s lights, send hit confirmations to the server
+              over WebSockets, and alert the app instantly.
+            </ScrollReveal>
           </p>
           <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags1.map((tag, x) => (
@@ -86,10 +89,12 @@ export default function Work() {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full max-w-5xl text-sm sm:text-base text-left">
           <p className="text-white/60 flex-1">
-            A landing page built for my family's 45+ year auto parts shop
-            on Route 66. Built with Next.js, TypeScript, and Tailwind CSS v4,
-            featuring a custom navy-and-gold brand, star ratings, and Google
-            Maps integration.
+            <ScrollReveal>
+              A landing page built for my family&apos;s 45+ year auto parts shop
+              on Route 66. Built with Next.js, TypeScript, and Tailwind CSS v4,
+              featuring a custom navy-and-gold brand, star ratings, and Google
+              Maps integration.
+            </ScrollReveal>
           </p>
           <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags2.map((tag, x) => (

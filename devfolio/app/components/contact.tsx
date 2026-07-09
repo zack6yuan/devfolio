@@ -3,6 +3,7 @@
 import { useState, SubmitEvent } from "react";
 import GradientText from "@/components/GradientText";
 import DecryptedText from "@/components/DecryptedText";
+import ScrollReveal from "@/components/ScrollReveal";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -58,7 +59,9 @@ export default function Contact() {
       </h2>
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl text-sm sm:text-base lg:text-lg xl:text-xl text-left md:text-left">
         <p className="text-white">
-          Right now I'm heads-down and not actively looking for new roles — but that doesn't mean the door's closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting. Based in Tulsa, working from wherever the wifi's good. Reach out, and let's see where it goes.
+          <ScrollReveal>
+            Right now I&apos;m heads-down and not actively looking for new roles — but that doesn&apos;t mean the door&apos;s closed. I love talking through ideas, trading notes on tools and workflows, or jumping into a collaboration that sounds genuinely interesting. Based in Tulsa, working from wherever the wifi&apos;s good. Reach out, and let&apos;s see where it goes.
+          </ScrollReveal>
         </p>
       </div>
 

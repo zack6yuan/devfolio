@@ -1,4 +1,6 @@
 import DecryptedText from "@/components/DecryptedText";
+import CountUp from "@/components/CountUp";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 export default function About() {
@@ -15,19 +17,23 @@ export default function About() {
       <div className="flex flex-col gap-8 lg:gap-10 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl 2xl:max-w-5xl">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm sm:text-base lg:text-lg xl:text-xl text-left">
           <p className="text-white flex-1">
-            I&apos;m a Full-Stack Web Developer and Computer Science graduate of
-            Atlas School in Tulsa, Oklahoma. Technology and graphic design pulled
-            me in early, and the pull between the two is still what drives my work.
+            <ScrollReveal>
+              I&apos;m a Full-Stack Web Developer and Computer Science graduate of
+              Atlas School in Tulsa, Oklahoma. Technology and graphic design pulled
+              me in early, and the pull between the two is still what drives my work.
+            </ScrollReveal>
           </p>
           <p className="text-white flex-1">
-            I&apos;m a developer who cares about the whole picture — the code that
-            makes things run and the design that makes them worth using. I build
-            web and mobile apps that hold up over time and feel good to use.
+            <ScrollReveal>
+              I&apos;m a developer who cares about the whole picture — the code that
+              makes things run and the design that makes them worth using. I build
+              web and mobile apps that hold up over time and feel good to use.
+            </ScrollReveal>
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8">
           <div className="flex flex-col">
-            <p className="font-sora font-bold text-lg sm:text-2xl xl:text-3xl">20<span className="text-orange-500">mo</span></p>
+            <p className="font-sora font-bold text-lg sm:text-2xl xl:text-3xl"><CountUp to={20} duration={3} /><span className="text-orange-500">mo</span></p>
             <p className="text-xs sm:text-sm xl:text-base font-mono text-gray-400">IMMERSIVE PROGRAM</p>
           </div>
           <div className="flex flex-col">
