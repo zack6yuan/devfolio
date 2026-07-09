@@ -2,7 +2,27 @@
 
 import { useEffect, useRef, useState } from "react";
 import DecryptedText from "@/components/DecryptedText";
+import BorderGlow from "@/components/BorderGlow";
 import RevealHeading from "./RevealHeading";
+
+// A single Technical Arsenal pill wrapped in the React Bits BorderGlow effect.
+// Props are tuned down from the component defaults (large card) to suit a small
+// marquee chip, and colored to the site's orange accent.
+function ToolPill({ tool }: { tool: string }) {
+  return (
+    <BorderGlow
+      className="shrink-0 cursor-pointer"
+      borderRadius={8}
+      glowRadius={12}
+      glowColor="18 100 50"
+      backgroundColor="#0a0a0a"
+      coneSpread={25}
+      colors={["#FF4D00", "#FFAA00", "#FF6A00"]}
+    >
+      <span className="px-4 py-2 font-sora text-sm whitespace-nowrap">{tool}</span>
+    </BorderGlow>
+  );
+}
 
 function MarqueeRow({
   items,
@@ -81,20 +101,10 @@ function MarqueeRow({
     >
       <div ref={trackRef} className="flex gap-3 w-max will-change-transform">
         {loop.map((tool, x) => (
-          <div
-            key={`a-${x}`}
-            className="border border-white/20 py-2 px-4 rounded-sm font-sora text-sm shrink-0 whitespace-nowrap"
-          >
-            {tool}
-          </div>
+          <ToolPill key={`a-${x}`} tool={tool} />
         ))}
         {loop.map((tool, x) => (
-          <div
-            key={`b-${x}`}
-            className="border border-white/20 py-2 px-4 rounded-sm font-sora text-sm shrink-0 whitespace-nowrap"
-          >
-            {tool}
-          </div>
+          <ToolPill key={`b-${x}`} tool={tool} />
         ))}
       </div>
     </div>

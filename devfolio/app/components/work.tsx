@@ -1,6 +1,26 @@
 import { ArrowRight } from "lucide-react";
 import DecryptedText from "@/components/DecryptedText";
+import BorderGlow from "@/components/BorderGlow";
 import RevealHeading from "./RevealHeading";
+
+// A project tech tag wrapped in the React Bits BorderGlow effect. Fully rounded
+// (borderRadius large) to keep the original pill shape, colored to the site's
+// orange accent — matching the Technical Arsenal chips.
+function TagPill({ tag }: { tag: string }) {
+  return (
+    <BorderGlow
+      className="shrink-0 cursor-pointer"
+      borderRadius={999}
+      glowRadius={10}
+      glowColor="18 100 50"
+      backgroundColor="#0a0a0a"
+      coneSpread={25}
+      colors={["#FF4D00", "#FFAA00", "#FF6A00"]}
+    >
+      <span className="px-3 py-1 text-[12px] font-mono whitespace-nowrap">{tag}</span>
+    </BorderGlow>
+  );
+}
 
 export default function Work() {
   const tags1 = ["WEBSOCKETS", "REAL-TIME", "HARDWARE", "CAPSTONE"];
@@ -40,12 +60,7 @@ export default function Work() {
           </p>
           <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags1.map((tag, x) => (
-              <div
-                className="rounded-full py-1 px-3 border border-gray-500/60 text-[12px] font-mono whitespace-nowrap"
-                key={x}
-              >
-                {tag}
-              </div>
+              <TagPill key={x} tag={tag} />
             ))}
           </div>
         </div>
@@ -78,12 +93,7 @@ export default function Work() {
           </p>
           <div className="flex flex-wrap items-start content-start self-start gap-2">
             {tags2.map((tag, x) => (
-              <div
-                className="rounded-full py-1 px-3 border border-gray-500/60 text-[12px] font-mono whitespace-nowrap"
-                key={x}
-              >
-                {tag}
-              </div>
+              <TagPill key={x} tag={tag} />
             ))}
           </div>
         </div>
