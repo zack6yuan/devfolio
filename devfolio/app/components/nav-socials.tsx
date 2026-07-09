@@ -15,7 +15,7 @@ export default function NavSocials() {
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className="flex items-center gap-2 rounded-full border border-white/20 py-2 px-4 text-xs text-white hover:border-orange-500 hover:text-orange-500 transition-colors"
+            className="flex items-center gap-2 rounded-full border border-white/20 bg-black py-2 px-4 text-xs text-white hover:border-orange-500 hover:text-orange-500 transition-colors"
           >
             <Icon size={16} />
             {label}

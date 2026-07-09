@@ -1,9 +1,11 @@
 import { ArrowDown } from "lucide-react";
+import DotGrid from "@/components/DotGrid";
 
 export default function Hero() {
   return (
-    <div id="home" className="text-left bg-black flex flex-col items-start justify-start px-6 pt-24 pb-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
-      <div className="flex flex-col w-full">
+    <div id="home" className="relative overflow-hidden text-left bg-black flex flex-col items-start justify-start px-6 pt-24 pb-6 sm:p-10 sm:pt-32 md:pt-40 gap-5 w-full">
+      <DotGrid className="pointer-events-none absolute inset-0 h-full w-full" />
+      <div className="relative z-10 flex flex-col w-full">
         <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center font-mono text-xs lg:text-sm xl:text-base py-5 gap-3 sm:gap-0 w-full">
           <div className="flex flex-col gap-1">
             <p>FULL-STACK WEB DEVELOPER</p>
@@ -16,8 +18,8 @@ export default function Hero() {
         </div>
 
         <h1 className="font-manrope font-extrabold uppercase text-8xl sm:text-9xl md:text-11xl 2xl:text-12xl text-white leading-[0.90] mt-5">
-          <span className="block">Zack</span>
-          <span className="block -mt-2 md:-mt-4">
+          <span className="block xl:inline xl:mr-[0.25em]">Zack</span>
+          <span className="block -mt-2 md:-mt-4 xl:inline xl:mt-0">
             <span
               style={{
                 WebkitTextFillColor: "#000",
@@ -32,7 +34,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <div className="flex flex-col items-start gap-3 text-gray-400 font-bold">
+      <div className="relative z-10 flex flex-col items-start gap-3 text-gray-400 font-bold">
         <p className="font-mono text-xs">SCROLL</p>
         <a href="#about">
           <ArrowDown size={20} className="animate-bounce" />
