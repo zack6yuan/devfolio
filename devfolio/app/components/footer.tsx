@@ -1,5 +1,6 @@
 import { ArrowUp } from "lucide-react";
 import { socials } from "./socials";
+import DecryptedText from "@/components/DecryptedText";
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
               className="flex items-center gap-2 rounded-full border border-white/20 py-2 px-4 text-xs text-white hover:border-orange-500 hover:text-orange-500 transition-colors"
             >
               <Icon size={16} />
-              {label}
+              <DecryptedText text={label} animateOn="inViewHover" />
             </a>
           );
         })}
@@ -26,9 +27,8 @@ export default function Footer() {
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-xs">
         <p className="text-gray-500">
-          © 2026 ZACK YUAN
+          <DecryptedText text="© 2026 ZACK YUAN | ALL RIGHTS RESERVED | BUILT WITH 🧡 IN TULSA" animateOn="inViewHover" />
           <span className="text-gray-600">
-         {" "}· FULL-STACK DEVELOPER · TULSA, OK
           </span>
         </p>
         <a

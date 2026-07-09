@@ -13,6 +13,12 @@
   --font-mono: var(--font-mono);
   --font-manrope: var(--font-manrope);
 
+  /* Unify every orange accent to the PillNav brand orange (#FF4D00).
+     The contact-section GradientText uses inline hex colors and is unaffected. */
+  --color-orange-300: #FF4D00;
+  --color-orange-400: #FF4D00;
+  --color-orange-500: #FF4D00;
+
   /* Custom display sizes above Tailwind's default text-9xl (8rem) */
   --text-10xl: 10rem;
   --text-10xl--line-height: 1;
