@@ -1,58 +1,113 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DecryptedText from "@/components/DecryptedText";
-import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
+gsap.registerPlugin(ScrollTrigger);
+
+type Entry = {
+  meta: string;
+  role: string;
+  org: string;
+  blurb: string;
+  location: string;
+};
+
+const entries: Entry[] = [
+  {
+    meta: "PRESENT",
+    role: "Web Developer",
+    org: "Leadline Performance Marketing",
+    blurb:
+      "Building and shipping full-stack web experiences — turning marketing strategy into fast, reliable, design-minded product.",
+    location: "TULSA, OK",
+  },
+  {
+    meta: "EDUCATION",
+    role: "Computer Science & Full-Stack Web Development",
+    org: "Atlas School",
+    blurb:
+      "A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps.",
+    location: "TULSA, OK",
+  },
+];
+
+function EntryPanel({ entry }: { entry: Entry }) {
+  return (
+    <article className="w-full md:w-screen shrink-0 md:h-full flex flex-col justify-center gap-4 px-5 md:px-16 py-10 md:py-0 bg-black">
+      <p className="font-mono text-sm lg:text-base text-orange-500 font-bold">{entry.meta}</p>
+      <h3 className="font-sora font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white max-w-4xl">
+        {entry.role}
+      </h3>
+      <p className="text-base lg:text-lg text-white">{entry.org}</p>
+      <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl font-sora">{entry.blurb}</p>
+      <p className="font-mono text-sm lg:text-base text-gray-500 font-bold mt-2">{entry.location}</p>
+    </article>
+  );
+}
+
 export default function Experience() {
-    return (
-      <div id="experience" className="flex flex-col items-start gap-5 pt-12 sm:pt-15 pb-10 px-5 bg-black">
+  const pinRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    const pin = pinRef.current;
+    if (!track || !pin) return;
+
+    // Horizontal pinned scroll on desktop only. Starts on the first entry
+    // (Web Developer) and slides left as you scroll, so later entries enter
+    // from the right.
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 768px)", () => {
+      const distance = () => track.scrollWidth - window.innerWidth;
+
+      const tween = gsap.to(track, {
+        x: () => -distance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: pin,
+          start: "top top",
+          end: () => "+=" + distance(),
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      return () => tween.kill();
+    });
+
+    return () => mm.revert();
+  }, []);
+
+  return (
+    <div id="experience" className="bg-black">
+      <div className="flex flex-col items-start gap-5 pt-12 sm:pt-15 px-5">
         <div className="flex items-center gap-3 font-mono w-full">
           <p className="text-orange-500 text-base">04</p>
-          <p className="text-gray-500 text-sm font-bold"><DecryptedText text="EXPERIENCE & EDUCATION" animateOn="inViewHover" /></p>
+          <p className="text-gray-500 text-sm font-bold">
+            <DecryptedText text="EXPERIENCE & EDUCATION" animateOn="inViewHover" />
+          </p>
           <hr className="border-t border-white/20 flex-1" />
         </div>
-  
+
         <h2 className="text-3xl w-full text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold wrap-break-word tracking-tighter sm:tracking-normal">
           <RevealHeading text="EXPERIENCE+EDUCATION" accentClass="[&:nth-child(11)]:text-orange-500" />
         </h2>
+      </div>
 
-        <div className="flex flex-col gap-8 font-sora w-full text-sm sm:text-base text-left">
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
-            <div className="w-24 shrink-0">
-              <p className="font-mono text-sm lg:text-base text-orange-500 font-bold">PRESENT</p>
-            </div>
-            <div className="flex flex-col flex-1">
-              <p className="font-sora font-bold text-xl lg:text-3xl">Web Developer</p>
-              <p className="text-sm lg:text-base text-white">Leadline Performance Marketing</p>
-              <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl">
-                <ScrollReveal>
-                  Building and shipping full-stack web experiences — turning
-                  marketing strategy into fast, reliable, design-minded product.
-                </ScrollReveal>
-              </p>
-            </div>
-            <div className="w-28 shrink-0 sm:text-right">
-              <p className="font-mono text-sm lg:text-base text-gray-500 font-bold">TULSA, OK</p>
-            </div>
-          </div>
-
-          <hr className="border-t border-white/20" />
-
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
-            <div className="w-24 shrink-0 hidden sm:block" aria-hidden="true" />
-            <div className="flex flex-col flex-1">
-              <p className="font-sora font-bold text-xl lg:text-3xl">Computer Science & Full-Stack Web Development</p>
-              <p className="text-sm lg:text-base text-white">Atlas School</p>
-              <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl">
-                <ScrollReveal>
-                  A peer-and project based software engineering program took me from the basics of C programming to the complexities of full-stack web development covering Front-End, Back-End, and DevOps.
-                </ScrollReveal>
-              </p>
-            </div>
-            <div className="w-28 shrink-0 sm:text-right">
-              <p className="font-mono text-sm lg:text-base text-gray-500 font-bold">TULSA, OK</p>
-            </div>
-          </div>
+      <div ref={pinRef} className="relative md:h-screen md:overflow-hidden mt-5">
+        <div ref={trackRef} className="flex flex-col md:flex-row md:h-full">
+          {entries.map((entry) => (
+            <EntryPanel key={entry.role} entry={entry} />
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
