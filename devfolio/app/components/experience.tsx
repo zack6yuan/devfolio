@@ -4,7 +4,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DecryptedText from "@/components/DecryptedText";
-import RevealText from "@/components/RevealText";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +70,7 @@ function EntryPanel({ entry }: { entry: Entry }) {
         {/* Right: enlarged blurb */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <RevealText>{entry.blurb}</RevealText>
+            <ScrollReveal>{entry.blurb}</ScrollReveal>
           </p>
         </div>
       </div>

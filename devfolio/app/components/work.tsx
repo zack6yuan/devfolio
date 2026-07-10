@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DecryptedText from "@/components/DecryptedText";
 import BorderGlow from "@/components/BorderGlow";
-import RevealText from "@/components/RevealText";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -125,7 +125,7 @@ function ProjectPanel({ project }: { project: Project }) {
         {/* Right: enlarged blurb + tag pills */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <RevealText>{project.blurb}</RevealText>
+            <ScrollReveal>{project.blurb}</ScrollReveal>
           </p>
           <div className="flex flex-wrap items-start content-start gap-2">
             {project.tags.map((tag, x) => (
