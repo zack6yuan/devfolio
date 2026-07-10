@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import DecryptedText from "@/components/DecryptedText";
 import BorderGlow from "@/components/BorderGlow";
 import RevealHeading from "./RevealHeading";
@@ -39,7 +39,9 @@ function MarqueeRow({
   const isDragging = useRef(false);
   const dragStartX = useRef(0);
   const dragStartOffset = useRef(0);
-  const [isPaused, setIsPaused] = useState(false);
+  // Paused-on-hover lives in a ref so toggling it never tears down and rebuilds
+  // the rAF loop (which a state dep would). The loop reads it live each frame.
+  const isPausedRef = useRef(false);
 
   useEffect(() => {
     let frame: number;
@@ -49,7 +51,7 @@ function MarqueeRow({
       const delta = time - lastTime;
       lastTime = time;
 
-      if (!isDragging.current && !isPaused) {
+      if (!isDragging.current && !isPausedRef.current) {
         offset.current += (direction * speed * delta) / 1000;
       }
 
@@ -68,7 +70,7 @@ function MarqueeRow({
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [direction, speed, isPaused]);
+  }, [direction, speed]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
     isDragging.current = true;
@@ -97,8 +99,12 @@ function MarqueeRow({
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      onMouseEnter={() => {
+        isPausedRef.current = true;
+      }}
+      onMouseLeave={() => {
+        isPausedRef.current = false;
+      }}
     >
       <div ref={trackRef} className="flex gap-3 w-max will-change-transform">
         {loop.map((tool, x) => (
