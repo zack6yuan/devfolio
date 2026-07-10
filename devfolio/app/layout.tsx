@@ -4,6 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 import SmoothScroll from "./components/smooth-scroll";
+import IntroLoader from "./components/intro-loader";
+import MagneticElements from "./components/magnetic";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -74,6 +76,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
+        <IntroLoader />
+        <MagneticElements />
         {children}
       </body>
     </html>

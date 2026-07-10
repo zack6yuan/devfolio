@@ -114,6 +114,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={status === "sending"}
+          data-magnetic="0.3"
           className="mt-2 self-start bg-orange-500 text-white rounded-lg py-2.5 px-8 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "sending" ? "Sending..." : "Send Message"}
