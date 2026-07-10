@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DecryptedText from "@/components/DecryptedText";
@@ -22,7 +22,7 @@ const entries: Entry[] = [
     role: "Web Developer",
     org: "Leadline Performance Marketing",
     blurb:
-      "Building and shipping full-stack web experiences — turning marketing strategy into fast, reliable, design-minded product.",
+      "Building and shipping full-stack web experiences — turning marketing strategy into fast, reliable, design-minded product. If it lives on the web and drives a campaign, I'm the one building it.",
     location: "TULSA, OK",
   },
   {
@@ -35,16 +35,44 @@ const entries: Entry[] = [
   },
 ];
 
+function SpecRow({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="flex items-center justify-between gap-6 border-t border-white/10 py-2.5">
+      <dt className="text-gray-500">{label}</dt>
+      <dd className="text-white text-right">{children}</dd>
+    </div>
+  );
+}
+
 function EntryPanel({ entry }: { entry: Entry }) {
   return (
-    <article className="w-full md:w-screen shrink-0 md:h-full flex flex-col justify-center gap-4 px-5 md:px-16 py-10 md:py-0 bg-black">
-      <p className="font-mono text-sm lg:text-base text-orange-500 font-bold">{entry.meta}</p>
-      <h3 className="font-sora font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white max-w-4xl">
-        {entry.role}
-      </h3>
-      <p className="text-base lg:text-lg text-white">{entry.org}</p>
-      <p className="text-sm lg:text-base text-gray-400 mt-1 max-w-2xl font-sora">{entry.blurb}</p>
-      <p className="font-mono text-sm lg:text-base text-gray-500 font-bold mt-2">{entry.location}</p>
+    <article className="w-full md:w-screen shrink-0 md:h-full flex items-center px-5 md:px-16 py-10 md:py-0 bg-black overflow-hidden">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 w-full max-w-6xl mx-auto md:items-center">
+        {/* Left: meta + title + spec list */}
+        <div className="flex flex-col gap-5">
+          <div className="flex items-center gap-3 font-manrope text-xs">
+            <span className="text-orange-500">{entry.meta}</span>
+            <span className="text-gray-600">/</span>
+            <span className="text-gray-500">{entry.location}</span>
+          </div>
+
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl text-white font-manrope">
+            {entry.role}
+          </h3>
+
+          <dl className="flex flex-col font-manrope text-sm max-w-md">
+            <SpecRow label="ORG">{entry.org}</SpecRow>
+            <SpecRow label="LOCATION">{entry.location}</SpecRow>
+          </dl>
+        </div>
+
+        {/* Right: enlarged blurb */}
+        <div className="flex flex-col gap-6 font-sora">
+          <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
+            {entry.blurb}
+          </p>
+        </div>
+      </div>
     </article>
   );
 }
