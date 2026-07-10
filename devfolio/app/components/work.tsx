@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMotionValue, type MotionValue } from "motion/react";
 import DecryptedText from "@/components/DecryptedText";
 import BorderGlow from "@/components/BorderGlow";
-import RevealText from "@/components/RevealText";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +77,17 @@ function SpecRow({ label, children }: { label: string; children: React.ReactNode
   );
 }
 
-function ProjectPanel({ project }: { project: Project }) {
+function ProjectPanel({
+  project,
+  progress,
+  revealStart,
+  revealEnd,
+}: {
+  project: Project;
+  progress?: MotionValue<number>;
+  revealStart: number;
+  revealEnd: number;
+}) {
   return (
     <article className="panel relative w-full md:w-screen shrink-0 md:h-full flex items-center px-5 md:px-16 py-10 md:py-0 bg-black overflow-hidden">
       {/* Oversized ghosted index number as an editorial backdrop (desktop). */}
@@ -125,7 +136,9 @@ function ProjectPanel({ project }: { project: Project }) {
         {/* Right: enlarged blurb + tag pills */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <RevealText>{project.blurb}</RevealText>
+            <ScrollReveal progress={progress} start={revealStart} end={revealEnd}>
+              {project.blurb}
+            </ScrollReveal>
           </p>
           <div className="flex flex-wrap items-start content-start gap-2">
             {project.tags.map((tag, x) => (
@@ -138,9 +151,25 @@ function ProjectPanel({ project }: { project: Project }) {
   );
 }
 
+// Total panels in the horizontal track (projects + outro CTA). Used to place
+// each project at its centered progress point so its blurb reveals as it slides
+// through the viewport.
+const PANEL_COUNT = projects.length + 1;
+
 export default function Work() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  // Drives the blurb reveals off the pin's scroll progress (desktop only).
+  const pinProgress = useMotionValue(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -165,6 +194,7 @@ export default function Work() {
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onUpdate: (self) => pinProgress.set(self.progress),
         },
       });
 
@@ -172,7 +202,7 @@ export default function Work() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [pinProgress]);
 
   return (
     <div id="projects" className="bg-black">
@@ -191,9 +221,21 @@ export default function Work() {
 
       <div ref={pinRef} className="relative md:h-screen md:overflow-hidden">
         <div ref={trackRef} className="flex flex-col md:flex-row md:h-full">
-          {projects.map((project) => (
-            <ProjectPanel key={project.index} project={project} />
-          ))}
+          {projects.map((project, i) => {
+            // Panel i is centered when the track has moved i/(PANEL_COUNT-1).
+            const center = i / (PANEL_COUNT - 1);
+            const revealStart = Math.max(0, center - 0.22);
+            const revealEnd = i === 0 ? 0.15 : center - 0.05;
+            return (
+              <ProjectPanel
+                key={project.index}
+                project={project}
+                progress={isDesktop ? pinProgress : undefined}
+                revealStart={revealStart}
+                revealEnd={revealEnd}
+              />
+            );
+          })}
 
           {/* Outro CTA panel — gives the horizontal travel a satisfying end. */}
           <article className="panel w-full md:w-screen shrink-0 md:h-full flex flex-col justify-center gap-6 px-5 md:px-16 py-16 md:py-0 bg-black">

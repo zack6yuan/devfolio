@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMotionValue, type MotionValue } from "motion/react";
 import DecryptedText from "@/components/DecryptedText";
-import RevealText from "@/components/RevealText";
+import ScrollReveal from "@/components/ScrollReveal";
 import RevealHeading from "./RevealHeading";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +46,17 @@ function SpecRow({ label, children }: { label: string; children: ReactNode }) {
   );
 }
 
-function EntryPanel({ entry }: { entry: Entry }) {
+function EntryPanel({
+  entry,
+  progress,
+  revealStart,
+  revealEnd,
+}: {
+  entry: Entry;
+  progress?: MotionValue<number>;
+  revealStart: number;
+  revealEnd: number;
+}) {
   return (
     <article className="w-full md:w-screen shrink-0 md:h-full flex items-center px-5 md:px-16 py-10 md:py-0 bg-black overflow-hidden">
       <div className="grid md:grid-cols-2 gap-8 md:gap-16 w-full max-w-6xl mx-auto md:items-center">
@@ -70,7 +81,9 @@ function EntryPanel({ entry }: { entry: Entry }) {
         {/* Right: enlarged blurb */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <RevealText>{entry.blurb}</RevealText>
+            <ScrollReveal progress={progress} start={revealStart} end={revealEnd}>
+              {entry.blurb}
+            </ScrollReveal>
           </p>
         </div>
       </div>
@@ -81,6 +94,16 @@ function EntryPanel({ entry }: { entry: Entry }) {
 export default function Experience() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const pinProgress = useMotionValue(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -105,6 +128,7 @@ export default function Experience() {
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onUpdate: (self) => pinProgress.set(self.progress),
         },
       });
 
@@ -112,7 +136,7 @@ export default function Experience() {
     });
 
     return () => mm.revert();
-  }, []);
+  }, [pinProgress]);
 
   return (
     <div id="experience" className="bg-black">
@@ -132,9 +156,21 @@ export default function Experience() {
 
       <div ref={pinRef} className="relative md:h-screen md:overflow-hidden mt-5">
         <div ref={trackRef} className="flex flex-col md:flex-row md:h-full">
-          {entries.map((entry) => (
-            <EntryPanel key={entry.role} entry={entry} />
-          ))}
+          {entries.map((entry, i) => {
+            // Entry i is centered when the track has moved i/(entries.length-1).
+            const center = i / (entries.length - 1);
+            const revealStart = Math.max(0, center - 0.22);
+            const revealEnd = i === 0 ? 0.15 : center - 0.05;
+            return (
+              <EntryPanel
+                key={entry.role}
+                entry={entry}
+                progress={isDesktop ? pinProgress : undefined}
+                revealStart={revealStart}
+                revealEnd={revealEnd}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
