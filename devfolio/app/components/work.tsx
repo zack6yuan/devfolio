@@ -66,6 +66,17 @@ const projects: Project[] = [
     year: "2024",
     linkLabel: "GitHub",
   },
+  {
+    index: "03",
+    title: "Ember",
+    href: "https://ember-lp.vercel.app/",
+    blurb:
+      "A private space where people say the quiet part out loud — built for anonymous venting, mood-based community discovery, and real-time peer support. Designed around a simple premise: no algorithms, no clout-chasing, no paywall — just honest conversation with people who get it. Currently in pre-launch.",
+    tags: ["NEXTJS", "TYPESCRIPT", "TAILWINDCSS", "REACT NATIVE", "VERCEL"],
+    type: "Landing Page / Mobile App",
+    year: "2025 – Present",
+    linkLabel: "ember-lp.vercel.app",
+  },
 ];
 
 function SpecRow({ label, children }: { label: string; children: React.ReactNode }) {
