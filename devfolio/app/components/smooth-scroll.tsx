@@ -8,6 +8,12 @@ import "lenis/dist/lenis.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 // Global smooth-scroll backbone. Instantiated in a post-mount effect (not via
 // ReactLenis root) so it never changes the server-rendered <html> markup and
 // can't trigger a hydration mismatch. Lenis is driven off GSAP's ticker so
@@ -15,6 +21,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({ lerp: 0.09, smoothWheel: true, anchors: true });
+    // Exposed so the intro loader can lock/unlock scroll during the reveal.
+    window.__lenis = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -26,6 +34,7 @@ export default function SmoothScroll() {
       lenis.off("scroll", ScrollTrigger.update);
       gsap.ticker.remove(update);
       lenis.destroy();
+      delete window.__lenis;
     };
   }, []);
 
