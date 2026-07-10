@@ -30,6 +30,8 @@ function Word({ children, progress, range }) {
  * @param {import("motion/react").MotionValue<number>} [props.progress]
  * @param {number} [props.start]
  * @param {number} [props.end]
+ * @param {import("motion/react").ScrollOffset} [props.offset] scroll offset used
+ *   only for the self-scroll fallback (ignored when `progress` is supplied).
  */
 export default function ScrollReveal({
   children,
@@ -37,11 +39,12 @@ export default function ScrollReveal({
   progress: externalProgress,
   start = 0,
   end = 1,
+  offset = ["start 0.85", "end 0.45"],
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.85", "end 0.45"],
+    offset,
   });
   const progress = externalProgress ?? scrollYProgress;
 

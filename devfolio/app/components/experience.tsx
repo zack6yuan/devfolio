@@ -51,11 +51,13 @@ function EntryPanel({
   progress,
   revealStart,
   revealEnd,
+  revealOffset,
 }: {
   entry: Entry;
   progress?: MotionValue<number>;
   revealStart: number;
   revealEnd: number;
+  revealOffset?: [string, string];
 }) {
   return (
     <article className="w-full md:w-screen shrink-0 md:h-full flex items-center px-5 md:px-16 py-10 md:py-0 bg-black overflow-hidden">
@@ -81,7 +83,12 @@ function EntryPanel({
         {/* Right: enlarged blurb */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <ScrollReveal progress={progress} start={revealStart} end={revealEnd}>
+            <ScrollReveal
+              progress={progress}
+              start={revealStart}
+              end={revealEnd}
+              offset={revealOffset}
+            >
               {entry.blurb}
             </ScrollReveal>
           </p>
@@ -158,9 +165,34 @@ export default function Experience() {
         <div ref={trackRef} className="flex flex-col md:flex-row md:h-full">
           {entries.map((entry, i) => {
             // Entry i is centered when the track has moved i/(entries.length-1).
-            const center = i / (entries.length - 1);
-            const revealStart = Math.max(0, center - 0.22);
-            const revealEnd = i === 0 ? 0.15 : center - 0.05;
+            const step = 1 / (entries.length - 1);
+            const center = i * step;
+
+            // Web Developer (panel 0) is centered the instant the section pins,
+            // so gating its reveal on the horizontal pin means it can't begin
+            // until it's already there. Drive it off its own scroll-into-view
+            // instead: the full wipe plays as the section approaches and
+            // finishes just before the pin locks it to center.
+            if (i === 0) {
+              return (
+                <EntryPanel
+                  key={entry.role}
+                  entry={entry}
+                  progress={undefined}
+                  revealStart={0}
+                  revealEnd={1}
+                  revealOffset={["start 0.95", "end 0.7"]}
+                />
+              );
+            }
+
+            // Later entries slide in from the right, and the blurb sits in the
+            // panel's right column — so it only enters the viewport in the last
+            // stretch of the pin (~0.53→0.95 for the final panel). Play the wipe
+            // across that entrance so it's actually seen, rather than completing
+            // off-screen (which reads as "already there" once it slides in).
+            const revealStart = center - 0.45 * step;
+            const revealEnd = center - 0.15 * step;
             return (
               <EntryPanel
                 key={entry.role}

@@ -2,17 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
-
-gsap.registerPlugin(TextPlugin);
-
+import RotatingText from "@/components/RotatingText";
 
 const BEAT_TWO = "It's nice to meet you!";
 
 export default function IntroLoader() {
   const rootRef = useRef<HTMLDivElement>(null);
-  const wipeRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
+  const [ready, setReady] = useState(false);
+  const [reduced, setReduced] = useState(false);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
@@ -25,35 +22,25 @@ export default function IntroLoader() {
       setDone(true);
     };
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReduced(isReduced);
+    // Mount the text one render later so the character-rise plays cleanly on the
+    // client (and never mismatches the server-rendered blank overlay).
+    setReady(true);
+
+    // Time the curtain to lift after the line has risen in and been read.
+    const revealTime = isReduced ? 0.25 : 1.0; // characters settle
+    const hold = isReduced ? 0.8 : 1.1; // dwell so it can be read
+    const liftDelay = revealTime + hold;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ onComplete: finish });
-    
-      if (reduced) {
-        // For reduced motion, just skip the typing and fade it in
-        if (textRef.current) textRef.current.textContent = BEAT_TWO;
-        tl.fromTo(textRef.current, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 })
-          .to(rootRef.current, { yPercent: -100, duration: 0.7, ease: "power4.inOut" }, "+=0.8");
-        return;
-      }
-    
-      tl
-        // 1. Brief pause before typing starts (optional)
-        .to({}, { duration: 0.2 })
-        
-        // 2. Type out the text letter-by-letter
-        .to(textRef.current, {
-          duration: 1.5,          // How long the typing takes (seconds)
-          text: BEAT_TWO,         // The string it will type out
-          ease: "none",           // "none" makes the typing speed consistent
-        })
-        
-        // 3. Pause so the user can read the full sentence
-        .to({}, { duration: 1.0 })
-        
-        // 4. Curtain up to reveal the site
-        .to(rootRef.current, { yPercent: -100, duration: 0.8, ease: "power4.inOut" });
+      gsap.to(rootRef.current, {
+        yPercent: -100,
+        duration: 0.9,
+        ease: "power4.inOut",
+        delay: liftDelay,
+        onComplete: finish,
+      });
     }, rootRef);
 
     return () => ctx.revert();
@@ -62,17 +49,31 @@ export default function IntroLoader() {
   if (done) return null;
 
   return (
-    <div ref={rootRef} className="fixed inset-0 z-9999 overflow-hidden bg-black">
-      <h1
-        ref={textRef}
-        className="absolute inset-0 z-10 flex items-center justify-center text-center px-6 font-manrope font-extrabold text-white text-4xl sm:text-6xl md:text-7xl leading-tight"
-      />
-      <div
-        ref={wipeRef}
-        aria-hidden="true"
-        className="absolute inset-0 z-20 bg-orange-500"
-        style={{ transform: "translateX(-100%)" }}
-      />
+    <div
+      ref={rootRef}
+      className="fixed inset-0 z-9999 flex items-center justify-center overflow-hidden bg-black [will-change:transform]"
+    >
+      {ready && (
+        <div className="px-6 text-center font-manrope font-extrabold text-white text-4xl sm:text-6xl md:text-7xl leading-tight">
+          <RotatingText
+            texts={[BEAT_TWO]}
+            splitBy="characters"
+            auto={false}
+            loop={false}
+            animatePresenceInitial
+            staggerFrom="first"
+            staggerDuration={reduced ? 0 : 0.03}
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={
+              reduced
+                ? { duration: 0.01 }
+                : { type: "spring", damping: 30, stiffness: 400 }
+            }
+            mainClassName="justify-center"
+          />
+        </div>
+      )}
     </div>
   );
 }

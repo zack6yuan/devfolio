@@ -82,11 +82,13 @@ function ProjectPanel({
   progress,
   revealStart,
   revealEnd,
+  revealOffset,
 }: {
   project: Project;
   progress?: MotionValue<number>;
   revealStart: number;
   revealEnd: number;
+  revealOffset?: [string, string];
 }) {
   return (
     <article className="panel relative w-full md:w-screen shrink-0 md:h-full flex items-center px-5 md:px-16 py-10 md:py-0 bg-black overflow-hidden">
@@ -136,7 +138,12 @@ function ProjectPanel({
         {/* Right: enlarged blurb + tag pills */}
         <div className="flex flex-col gap-6 font-sora">
           <p className="text-white/70 text-lg md:text-xl lg:text-2xl leading-relaxed">
-            <ScrollReveal progress={progress} start={revealStart} end={revealEnd}>
+            <ScrollReveal
+              progress={progress}
+              start={revealStart}
+              end={revealEnd}
+              offset={revealOffset}
+            >
               {project.blurb}
             </ScrollReveal>
           </p>
@@ -223,9 +230,32 @@ export default function Work() {
         <div ref={trackRef} className="flex flex-col md:flex-row md:h-full">
           {projects.map((project, i) => {
             // Panel i is centered when the track has moved i/(PANEL_COUNT-1).
-            const center = i / (PANEL_COUNT - 1);
-            const revealStart = Math.max(0, center - 0.22);
-            const revealEnd = i === 0 ? 0.15 : center - 0.05;
+            const step = 1 / (PANEL_COUNT - 1);
+            const center = i * step;
+
+            // Aeroduel (panel 0) is centered the instant the section pins, so
+            // gating its reveal on the horizontal pin means it can't begin until
+            // it's already there. Drive it off its own scroll-into-view instead:
+            // the full wipe plays as the section approaches and finishes just
+            // before the pin locks it to center (offset ends high enough that it
+            // completes before the pin freezes the element's position).
+            if (i === 0) {
+              return (
+                <ProjectPanel
+                  key={project.index}
+                  project={project}
+                  progress={undefined}
+                  revealStart={0}
+                  revealEnd={1}
+                  revealOffset={["start 0.95", "end 0.7"]}
+                />
+              );
+            }
+
+            // Interparts (panel 1) holds off until it has slid most of the way
+            // in, revealing just before it centers.
+            const revealStart = center - 0.45 * step;
+            const revealEnd = center - 0.05 * step;
             return (
               <ProjectPanel
                 key={project.index}
