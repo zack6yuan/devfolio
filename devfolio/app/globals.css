@@ -55,15 +55,10 @@
     }
   }
 
-  /* Add this to your global CSS if you want a blinking cursor effect */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-.typing-cursor {
-  border-right: 3px solid #f97316; /* orange-500 */
-  animation: blink 0.75s step-end infinite;
-}
+  /* Keyframes are allowed inside @theme blocks */
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
 
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -101,7 +96,13 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6)
+  --radius-4xl: calc(var(--radius) * 2.6); /* Fixed missing semicolon */
+}
+
+/* MOVED OUTSIDE OF @theme: Normal CSS utility classes go here */
+.typing-cursor {
+  border-right: 3px solid #f97316; /* orange-500 */
+  animation: blink 0.75s step-end infinite;
 }
 
 @keyframes marquee {
