@@ -106,7 +106,7 @@ export default function Hero() {
         className="relative z-10 flex flex-col items-center gap-3 text-gray-400 font-bold"
       >
         <p className="font-mono text-xs">SCROLL</p>
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to About">
           <ArrowDown size={20} className="animate-bounce" />
         </a>
       </div>

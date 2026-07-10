@@ -23,10 +23,13 @@ export default function IntroLoader() {
     };
 
     const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Deliberate client-only setup: detect reduced-motion and defer the text
+    // mount by one render so the motion-driven line never mismatches the blank
+    // server-rendered overlay. Setting state in this mount effect is intended.
+    /* eslint-disable react-hooks/set-state-in-effect */
     setReduced(isReduced);
-    // Mount the text one render later so the character-rise plays cleanly on the
-    // client (and never mismatches the server-rendered blank overlay).
     setReady(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
 
     // Time the curtain to lift after the line has risen in and been read.
     const revealTime = isReduced ? 0.25 : 1.0; // characters settle

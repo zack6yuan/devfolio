@@ -28,8 +28,6 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-xs">
         <p className="text-gray-500">
           <DecryptedText text="© 2026 ZACK YUAN | ALL RIGHTS RESERVED | BUILT WITH 🧡 IN TULSA" animateOn="inViewHover" />
-          <span className="text-gray-600">
-          </span>
         </p>
         <a
           href="#home"

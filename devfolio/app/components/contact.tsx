@@ -121,12 +121,12 @@ export default function Contact() {
         </button>
 
         {status === "success" && (
-          <p className="text-orange-500 text-sm font-mono">
+          <p role="status" aria-live="polite" className="text-orange-500 text-sm font-mono">
             Message sent — I&apos;ll get back to you soon.
           </p>
         )}
         {status === "error" && (
-          <p className="text-red-500 text-sm font-mono">
+          <p role="alert" className="text-red-500 text-sm font-mono">
             Something went wrong. Try again, or email me directly.
           </p>
         )}
