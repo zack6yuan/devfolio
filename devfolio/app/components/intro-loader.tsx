@@ -20,14 +20,28 @@ export default function IntroLoader() {
       setDone(true);
     };
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      finish();
-      return;
-    }
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const ctx = gsap.context(() => {
       const counter = { v: 0 };
+      const setCounter = () => {
+        if (counterRef.current)
+          counterRef.current.textContent = String(
+            Math.round(counter.v)
+          ).padStart(3, "0");
+      };
       const tl = gsap.timeline({ onComplete: finish });
+
+      if (reduced) {
+        // Gentle reveal for reduced-motion: no letter bounce, quick counter,
+        // then a soft fade + curtain wipe. Still plays (doesn't skip).
+        tl
+          .to(counter, { v: 100, duration: 0.6, ease: "power2.out", onUpdate: setCounter }, 0)
+          .to(".intro-bar", { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 0)
+          .to([".intro-name", ".intro-meta"], { opacity: 0, duration: 0.3 }, ">-0.05")
+          .to(rootRef.current, { yPercent: -100, duration: 0.7, ease: "power4.inOut" }, "<");
+        return;
+      }
 
       tl
         // Letters assemble into place.
@@ -38,21 +52,7 @@ export default function IntroLoader() {
           stagger: 0.045,
         })
         // Loading counter + progress bar run alongside.
-        .to(
-          counter,
-          {
-            v: 100,
-            duration: 1.3,
-            ease: "power2.out",
-            onUpdate: () => {
-              if (counterRef.current)
-                counterRef.current.textContent = String(
-                  Math.round(counter.v)
-                ).padStart(3, "0");
-            },
-          },
-          0
-        )
+        .to(counter, { v: 100, duration: 1.3, ease: "power2.out", onUpdate: setCounter }, 0)
         .to(".intro-bar", { scaleX: 1, duration: 1.3, ease: "power2.inOut" }, 0)
         // Name exits upward, then the panel curtain-wipes up to reveal the site.
         .to(".intro-name", {
