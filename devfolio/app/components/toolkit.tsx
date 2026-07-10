@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import DecryptedText from "@/components/DecryptedText";
 import BorderGlow from "@/components/BorderGlow";
 import RevealHeading from "./RevealHeading";
+import { tools } from "@/lib/tools";
 
 // A single Technical Arsenal pill wrapped in the React Bits BorderGlow effect.
 // Props are tuned down from the component defaults (large card) to suit a small
@@ -112,26 +113,6 @@ function MarqueeRow({
 }
 
 export default function Toolkit() {
-  const tools = [
-    "React",
-    "React Native",
-    "Next.js",
-    "TypeScript",
-    "TailwindCSS",
-    "Python",
-    "Flask",
-    "Express.js",
-    "Vercel",
-    "AI Workflows",
-    "Claude Code",
-    "WordPress",
-    "Kinsta",
-    "ACF",
-    "YooTheme",
-    "Gravity Forms",
-    "MCP",
-  ];
-
   const rowOne = tools.slice(0, 7);
   const rowTwo = tools.slice(7);
 

@@ -27,7 +27,3 @@ and exposed as CSS variables (`--font-sora`, `--font-mono`, `--font-black`) cons
 Tailwind v4 `@theme inline` block in `app/globals.css`. Custom keyframe animations (`wiggle`,
 `icon-bounce`, `marquee`) are also registered there rather than in a JS Tailwind config — this
 project uses Tailwind v4's CSS-first config, not `tailwind.config.ts`.
-
-`ProjectCard.tsx` takes an `accent` prop (`teal | orange | green | brown`) mapped to a style
-record for border/gradient/tag colors — follow this pattern rather than inlining conditional
-Tailwind classes when adding new accent-driven variants.
