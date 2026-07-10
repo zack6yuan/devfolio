@@ -3,6 +3,7 @@ import { Sora, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
+import SmoothScroll from "./components/smooth-scroll";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -69,9 +70,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("dark", "h-full", "antialiased", "scroll-smooth", sora.variable, mono.variable, manrope.variable, "font-sans")}
+      className={cn("dark", "h-full", "antialiased", sora.variable, mono.variable, manrope.variable, "font-sans")}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }
