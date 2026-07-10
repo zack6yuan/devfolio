@@ -12,7 +12,7 @@ export default function About() {
         <hr className="border-t border-white/20 flex-1" />
       </div>
       <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-sora font-extrabold text-left wrap-break-word">
-        <RevealHeading text="DESIGN+DEVELOPMENT" accentClass="[&:nth-child(7)]:text-orange-500" />
+        <RevealHeading text="LOGIC+FEEL" accentClass="[&:nth-child(6)]:text-orange-500" />
       </h2>
       <div className="flex flex-col gap-8 lg:gap-10 font-sora w-full sm:w-[90%] md:w-[85%] lg:w-[75%] max-w-4xl 2xl:max-w-5xl">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm sm:text-base lg:text-lg xl:text-xl text-left">
