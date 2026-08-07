@@ -94,9 +94,6 @@ export default function Hero() {
             >
               Yuan
             </span>
-            <span className="text-orange-500 text-6xl">
-            ツ
-            </span>
           </span>
         </h1>
       </div>
