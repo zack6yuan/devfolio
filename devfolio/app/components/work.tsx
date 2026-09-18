@@ -68,14 +68,14 @@ const projects: Project[] = [
   },
   {
     index: "03",
-    title: "Ember",
-    href: "https://ember-lp.vercel.app/",
+    title: "Kitchi",
+    href: "https://www.playkitchi.com",
     blurb:
-      "A private space where people say the quiet part out loud — built for anonymous venting, mood-based community discovery, and real-time peer support. Designed around a simple premise: no algorithms, no clout-chasing, no paywall — just honest conversation with people who get it. Currently in pre-launch.",
-    tags: ["NEXTJS", "TYPESCRIPT", "TAILWINDCSS", "REACT NATIVE", "VERCEL"],
-    type: "Landing Page / Mobile App",
-    year: "2025 – Present",
-    linkLabel: "ember-lp.vercel.app",
+      "The pre-launch landing page for Kitchi — pickleball played entirely in the kitchen, the part of the game where the best points happen. Built with Next.js, TypeScript, and Tailwind CSS v4, featuring a WebGL dither hero, GSAP-driven scroll animations that respect reduced motion, and a Formspree-powered waitlist.",
+    tags: ["NEXTJS", "TYPESCRIPT", "TAILWINDCSS", "GSAP", "FORMSPREE", "VERCEL"],
+    type: "Landing Page",
+    year: "2026 – Present",
+    linkLabel: "playkitchi.com",
   },
 ];
 
